@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Transformez une maquette en site web avec HTML & CSS",
+    "date": "Août 2022",
+    "description": "Projet de développement web consistant à transformer une maquette en site web responsive à l'aide de HTML et CSS.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  },
+  {
+    "id": 2,
+    "title": "Dynamisez une page web avec des animations CSS",
+    "date": "Septembre 2022",
+    "description": "Projet de développement web consistant à ajouter des animations CSS à une page web existante.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  },
+  {
+    "id": 3,
+    "title": "Optimisez un site web existant",
+    "date": "Octobre 2022",
+    "description": "Projet de développement web consistant à optimiser les performances d'un site web existant en utilisant des outils et des techniques de développement web modernes.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  },
+  {
+    "id": 4,
+    "title": "Construisez un site e-commerce en JavaScript",
+    "date": "Novembre 2022",
+    "description": "Projet de développement web consistant à construire un site e-commerce complet en JavaScript, en utilisant des frameworks et des outils de développement web modernes.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  },
+  {
+    "id": 5,
+    "title": "Construisez une API sécurisée pour une application d'avis gastronomiques",
+    "date": "Décembre 2022",
+    "description": "Projet de développement web consistant à construire une API sécurisée pour une application d'avis gastronomiques, en utilisant Node.js, Express et MongoDB.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  },
+  {
+    "id": 6,
+    "title": "Créez une application web de location immobilière avec React",
+    "date": "Janvier 2023",
+    "description": "Projet de développement web consistant à construire une application web de location immobilière avec React, en utilisant des outils et des techniques de développement web modernes.",
+    "icon": "IoSchoolSharp",
+    "buttonText": "Voir le projet"
+  }
+]

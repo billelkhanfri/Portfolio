@@ -1,0 +1,309 @@
+// common.scss
+@import "../../styles/variables.scss";
+
+/* start Avatar */
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* end Avatar*/
+
+/* Start Header area*/
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  
+}
+
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 6px 76px;
+      background-color: #000000d2;
+   height: 80px;
+;
+  // background-color: rgb(96, 93, 93);
+  .logo {
+    width: 300px;
+    align-self: center;
+    font-weight: bold;
+  }
+  .links {
+    list-style: none;
+    margin: 0;
+    align-self: baseline;
+    li {
+      display: inline-block;
+      margin-left: 25px;
+      font-size: 15 8px;
+      a {
+        color: #ffff;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover,
+        &.active {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+  .links-container {
+    width: 100%;
+    text-align: right;
+  }
+  .toggle-menu {
+    width: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+    position: relative;
+  }
+}
+
+.header-area .toggle-menu.menu-active:before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+}
+@media (max-width: 991px) {
+  .header-area {
+    padding: 0px 40px;
+  }
+  .header-area .toggle-menu {
+    display: inline-block;
+  }
+  .header-area .links {
+    display: none;
+  }
+  .header-area .links.open {
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: left;
+  }
+  .header-area .links.open li a {
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .header-area .links li {
+    display: block;
+    margin: 10px;
+    font-size: 15px;
+  }
+}
+.menu {
+  font-size: 43px;
+  color: white;
+  z-index: 3000;
+  cursor: pointer;
+}
+.header-area .toggle-menu:focus {
+  outline: none;
+}
+.header-area .toggle-menu span {
+  display: block;
+  background-color: #fff;
+  height: 4px;
+  margin-bottom: 4px;
+}
+/* End Header area */
+
+// Define the primary button color
+
+// Define the button styles
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.contact {
+  @extend .button;
+
+  &:hover,
+  &.active {
+    background-color: white;
+    color: var(--primary-color);
+  }
+}
+
+.settings-box {
+  position: fixed;
+  left: 0px; /* start offscreen */
+  top: 0px;
+  background-color: rgba(245, 245, 245, 0.45);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid #d8d8d8;
+  z-index: 1000;
+  width: 240px;
+  min-height: 100vh;
+  padding: 0 14px;
+  transition: transform 1s ease-out;
+  .settings-container {
+    margin-top: 42px;
+  }
+}
+
+.toggle-settings--open {
+  transform: translateX(168px) ;
+  transition: transform 0.4s ease-out;
+}
+
+/* Add a class to trigger the animation */
+.settings-box-open {
+  transform: translateX(240px);
+}
+
+.toggle-settings {
+  position: fixed;
+  left: 72px;
+  top: 80px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 3px;
+  background-color: white;
+  border-radius: 4px;
+  .toggle-settings {
+    transform: translateX(0);
+    transition: transform 1s ease-out;
+  }
+}
+
+.gear {
+  font-size: 34px;
+  color: var(--primary-color);
+  z-index: 3000;
+  cursor: pointer;
+}
+.gear.active {
+  animation: rotate 2.5s infinite linear;
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.settings-box.open {
+  left: 0;
+}
+.settings-box .option-box {
+  background-color: #f1f1f1;
+  margin-top: 12px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  height: 90px;
+}
+.settings-box .option-box h4 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+  border-radius: 6px 6px 0 0;
+  padding: 6px;
+  background-color: #d8d8d8;
+  border-bottom: 1px solid #c1bfbf;
+  margin: 0;
+}
+.settings-box .option-box .colors-list {
+  padding: 14px;
+  margin: 0;
+}
+.settings-box .option-box .colors-list li {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #333;
+  display: inline-block;
+  margin-right: 2px;
+}
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #00afff;
+}
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: brown;
+}
+.settings-box .option-box .colors-list li.active {
+  opacity: 1;
+  border: 2px solid#a2a2a2;
+}
+
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+  width: 50px;
+  margin-top: 10px;
+  background-color: var(--main--color);
+  display: inline-block;
+  color: #ffff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.settings-box .option-box span.active {
+  opacity: 1;
+}
+
+.settings-box .reset-options {
+  background-color: red;
+  border: none;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* End settings box */

@@ -1,0 +1,269 @@
+.landing-page {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  object-fit: cover;
+  width: 100vw;
+}
+.animate {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.8; /* Start with 0 opacity */
+  }
+  100% {
+    opacity: 1; /* End with full opacity */
+  }
+}
+.overlay {
+  background-color: #00000075;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.introduction-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.introduction-text h2 {
+  background: var(
+    --color-primary
+  ); /* Use your gradient values or variable */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 5;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 40px;
+  text-align: center;
+ 
+
+}
+.introduction-text h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+
+  margin-bottom: 10px;
+}
+.introduction-text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+/* start animation */
+.title.animated {
+  animation: cards 1s ease-in-out;
+}
+.big-title.animated {
+  animation: cards-2 1.2s ease-in-out;
+}
+.big-title {
+  position: relative;
+  background: rgba(255, 255, 255, 0.806);
+  height: 34vh;
+  border-radius: 12px;
+}
+
+.parag.animated {
+  animation: cards-3 1.2s ease-in-out;
+  position: relative;
+}
+
+
+@keyframes cards {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+@keyframes cards-2 {
+  from {
+    transform: translateX(200px);
+    opacity: 20%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+@keyframes cards-3 {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+/* end animation */
+
+/* start slider */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  bottom: 60px;
+  left: 64px;
+}
+.previous {
+  color: white;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+}
+
+.buttons button {
+  background-color: var(--primary-color);
+  width: 45px;
+  height: 45px;
+  border: transparent;
+  cursor: pointer;
+  opacity: 80%;
+  border-radius: 6px;
+}
+.buttons button:hover {
+  background-color: var(--secondary-color);
+  opacity: 100%;
+}
+.dots-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  top: 350px;
+  left: 81px;
+  text-align: center;
+  height: fit-content;
+}
+.dots {
+  width: 18px; /* Adjust size as needed */
+  height: 18px; /* Adjust size as needed */
+  position: relative;
+ 
+  color: transparent;
+  
+}
+
+.dots.circled {
+  border: 1px solid #f9f9f9;
+  border-radius: 50%;
+  
+}
+
+.dots::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   cursor: pointer;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction-text h2 {
+    font-size: 36px;
+    padding: 20px;
+    
+  }
+}
+@media screen and (max-width: 768px) {
+   .introduction-text h2 {
+    font-size: 45px;
+    padding: 20px;
+    
+  }
+  .introduction-text {
+    padding: 0;
+    width: 80%;
+  }
+  .buttons button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .introduction-text h4 {
+    font-size: 14px;
+  }
+  .introduction-text p {
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 15px;
+    bottom: 100px;
+    left: 16px;
+  }
+  .previous {
+    transform: rotate(270deg);
+    width: 24px;
+    height: 24px;
+  }
+  .buttons button {
+    width: 36px;
+    height: 36px;
+  }
+  .dots-wrapper {
+    left: 20px;
+    top: 120px;
+  }
+  .dots {
+    width: 20px;
+    height: 20px;
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  .dots.circled {
+    border: 1px solid #f9f9f9;
+    border-radius: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .buttons button {
+    width: 36px;
+    height: 36px;
+  }
+  .introduction-text h2 {
+    font-size: 36px;
+    padding: 0px 20px;
+    
+  }
+}
+
+
+
+/* end slider */

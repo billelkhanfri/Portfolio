@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "title": "Développeur web/Bac +2 | Openclassrooms",
+    "date": "2022-2023",
+    "icon": "IoSchoolSharp"
+  },
+  {
+    "id": 2,
+    "title": "Concepteur Designer UI/Bac +3 | POP School",
+    "date": "2021-2022",
+    "icon": "IoSchoolSharp"
+  },
+  {
+    "id": 3,
+    "title": "Master en Anglais / Bac+5 / Université C.B | Algérie",
+    "date": "2015-2020",
+    "description": "L'integration de BYOD (Bring Your Own Device) - L'utilisation du SRS ( Student Response System) dans une classe EFL ( English as a foreign language)- La mesure de perception des étudiants  et des enseignants qui utilisent le SRS",
+    "icon": "IoSchoolSharp"
+  }
+]
