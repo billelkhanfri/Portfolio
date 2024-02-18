@@ -1,9 +1,8 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { SiTailwindcss, SiMongodb } from "react-icons/si";
 
 import { IoLogoNodejs } from "react-icons/io";
-import "../styles/Home.scss";
+import "../styles/Home.css";
 
 function Learning() {
   return (

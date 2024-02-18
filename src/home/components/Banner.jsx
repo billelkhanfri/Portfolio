@@ -1,5 +1,5 @@
 //import images from "../images.json";
-import "../styles/Home.scss";
+import "../styles/Home.css";
 import { useState, useEffect } from "react";
 
 const images = [

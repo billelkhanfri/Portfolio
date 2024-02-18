@@ -1,5 +1,5 @@
 
-import "../styles/Home.scss";
+import "../styles/Home.css";
 import SettingBox from "../../common/components/SettingBox";
 import { useEffect } from "react";
 import Separator from "../../common/components/Separator";
@@ -25,14 +25,13 @@ function HomePage() {
 
 
   const slide1 =
-    "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
-;
+    "https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/landing-images%2F01.jpg?alt=media&token=264a1fe8-19fe-49df-80ab-3dd1533b9faf";
   const slide2 =
-"https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80";  const slide3 =
-     "https://firebasestorage.googleapis.com/v0/b/khanfri-billel.appspot.com/o/Capture%20d%E2%80%99e%CC%81cran%202024-02-15%20a%CC%80%2018.45.56.png?alt=media&token=87abc8ab-870b-45c8-b8bf-fe67d6b69a36";
+"https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/landing-images%2F05.jpg?alt=media&token=7844695f-792e-45ab-a044-c0597dbcce0a"  ;   
+const slide3 =
+"https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/landing-images%2F02.jpg?alt=media&token=72d01fee-ab8c-4e17-b772-575aae67d690";
 const slide4 =
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80";
-
+  "https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/landing-images%2F03.jpg?alt=media&token=2910eda4-1dae-4db5-8725-c2dbe8a5d507";
   const slides = [slide1, slide2, slide3,slide4];
   return (
     <>

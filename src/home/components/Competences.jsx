@@ -7,7 +7,7 @@ import { BsGit, BsGithub } from "react-icons/bs";
 
 import { DiSass, DiReact } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import "../styles/Home.scss";
+import "../styles/Home.css";
 
 const Competences = () => {
   return (

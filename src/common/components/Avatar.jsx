@@ -1,5 +1,4 @@
-import React from "react";
-import "../styles/common.scss";
+import "../styles/common.css";
 
 function Avatar(props) {
   return (

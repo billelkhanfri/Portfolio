@@ -1,9 +1,17 @@
-import React from "react";
-import "../../styles/variables.scss";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// Keyframes for the shiny animation
+const shinyAnimation = keyframes`
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 200px;
+  }
+`;
 
 const SectionWrapper = styled.div`
-  padding: 6px 0;
+  padding: 20px;
   text-align: center;
   margin: 0 40px;
   border-radius: 5px;
@@ -11,22 +19,27 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.h1`
   font-size: 36px;
-  color: ${(props) => props.color};
-  border-right: 6px solid ${(props) => props.color};
+  color: var(--primary-color);
   width: fit-content;
   margin: auto;
-  padding: 6px 50px;
-  border-left: 6px solid ${(props) => props.color};
+  background: linear-gradient(
+    to right,
+    #a8a8a8 0,
+    #ffffff 7%,
+   black 20%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ${shinyAnimation} 11s linear infinite;
 `;
 
 function Section({ title, children, color }) {
   return (
-    <>
-      <SectionWrapper>
-        <SectionTitle color={color}>{title}</SectionTitle>
-        {children}
-      </SectionWrapper>
-    </>
+    <SectionWrapper>
+      <SectionTitle>{title}</SectionTitle>
+      {children}
+    </SectionWrapper>
   );
 }
 

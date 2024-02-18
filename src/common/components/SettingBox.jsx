@@ -1,9 +1,10 @@
-import  { useState, useEffect, useRef } from "react";
-import "../styles/common.scss";
+import { useState, useEffect, useRef } from "react";
+import "../styles/common.css";
 import { MdWidgets } from "react-icons/md";
 import Collapse from "./Collapse";
 import ColorsContent from "./ColorsContent";
 import BgContent from "./BgContent";
+import ModeContent from "./ModeContent";
 
 function SettingBox() {
   const [toggle, setToggle] = useState(false);
@@ -31,13 +32,13 @@ function SettingBox() {
         className={`toggle-settings ${toggle ? "toggle-settings--open" : ""}`}
         onClick={() => setToggle(!toggle)}
       >
-        <MdWidgets  className={`gear ${toggle ? "active" : ""}`} />
-      
+        <MdWidgets className={`gear ${toggle ? "active" : ""}`} />
       </div>
 
       {toggle && (
         <div className="settings-box">
           <div className="settings-container">
+            <ModeContent></ModeContent>
             <Collapse title="Couleurs"> {<ColorsContent />}</Collapse>
             <Collapse title="Backgrounds"> {<BgContent />} </Collapse>
           </div>

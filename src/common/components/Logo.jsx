@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/common.scss";
+import "../styles/common.css";
 function Logo() {
   return <div className="logo">Billel KHANFRI</div>;
 }

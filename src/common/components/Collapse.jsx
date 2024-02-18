@@ -1,7 +1,6 @@
-import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Arrow from "../../images/Arrow.svg";
-import "../../styles/variables.scss";
+import { useState } from "react";
 
 const fadeIn = keyframes`
   0% {

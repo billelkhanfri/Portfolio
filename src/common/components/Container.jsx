@@ -1,5 +1,4 @@
-import React from "react";
-import "../styles/common.scss";
+import "../styles/common.css";
 
 const Container = ({ children }) => {
   return <div className="wrapper">{children}</div>;

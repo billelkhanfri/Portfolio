@@ -1,7 +1,7 @@
 import React from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-import "../styles/Home.scss";
+import "../styles/Home.css";
 
 function Skills({ value, label }) {
   return (

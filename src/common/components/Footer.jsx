@@ -1,4 +1,3 @@
-import React from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import styled from "styled-components";
