@@ -1,27 +1,80 @@
-import React from "react";
+import  { useState, useEffect } from "react";
 import styled from "styled-components";
-const Separat = styled.div`
-  width: 100%;
-  height: 0;
-  border-top: 1px solid #ccc;
-  margin: 20px 0;
+const RectOne = styled.div`
+  width: 130.04px;
+  height: 90px;
+  background-color: var(--primary-color);
+`;
+const RecTow = styled.div`
+  width: 45.86px;
+  height: 90px;
+  background-color: var(--primary-color);
+`;
+const RecThree = styled.div`
+  width: 25.17px;
+  height: 90px;
+  background-color: var(--primary-color);
+`;
+const RecFour = styled.div`
+  width: 12.1px;
+  height: 90px;
+  background-color: var(--primary-color);
+`;
+const RecFive = styled.div`
+  width: 4px;
+  height: 90px;
+  background-color: var(--primary-color);
+`;
+const Wrapper = styled.div`
+  width: 200px;
+  height: 90px;
+  background-color: white;
+  display: flex;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -13px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary-color);
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-  }
+  gap: 10px;
 `;
 function Ligne() {
-  return <Separat></Separat>;
+ const [scrollY, setScrollY] = useState(0);
+ const [lastScrollY, setLastScrollY] = useState(0);
+ const [translateY, setTranslateY] = useState(0);
+
+ // Update scroll position on scroll
+ const handleScroll = () => {
+   setScrollY(window.scrollY);
+ };
+
+ useEffect(() => {
+   // Add scroll event listener when component mounts
+   window.addEventListener("scroll", handleScroll);
+
+   // Remove scroll event listener when component unmounts
+   return () => {
+     window.removeEventListener("scroll", handleScroll);
+   };
+ }, []); // Only run this effect once on component mount
+
+ useEffect(() => {
+   // Calculate the direction of scroll
+   const direction = scrollY > lastScrollY ? "down" : "up";
+
+   // Update translateY based on scroll direction
+   setTranslateY(
+     (prevTranslateY) => prevTranslateY + (direction === "down" ? 0.6 : -0.2)
+   );
+
+   // Update lastScrollY
+   setLastScrollY(scrollY);
+ }, [scrollY]);
+
+  return (
+    <Wrapper style={{ transform: `translateY(${translateY}px)` }}>
+      <RectOne></RectOne>
+      <RecTow></RecTow>
+      <RecThree></RecThree>
+      <RecFour></RecFour>
+      <RecFive></RecFive>
+    </Wrapper>
+  );
 }
 
 export default Ligne;

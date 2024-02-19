@@ -1,16 +1,53 @@
 import Billel from "../../images/Billel-profile-picture.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import apostrophe from "../../images/apostrophe.svg";
+import { useState, useEffect } from "react";
 
 import { FiMail } from "react-icons/fi";
 import "../styles/Home.css";
 function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [translateY, setTranslateY] = useState(0);
+
+  // Update scroll position on scroll
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    // Add scroll event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove scroll event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Only run this effect once on component mount
+
+  useEffect(() => {
+    // Calculate the direction of scroll
+    const direction = scrollY > lastScrollY ? "down" : "up";
+
+    // Update translateY based on scroll direction
+    setTranslateY(
+      (prevTranslateY) => prevTranslateY + (direction === "down" ? -0.2 : 0.2)
+    );
+
+    // Update lastScrollY
+    setLastScrollY(scrollY);
+  }, [scrollY]);
+
   return (
     <div className="custom-container">
       <div className="hero">
-        <div className="hero-image ">
+        <div
+          className="hero-image"
+          style={{ transform: `translateY(${translateY}px)` }}
+        >
           <img src={Billel} alt="person with glasses" />
         </div>
+
         <div className="hero-text-wrapper">
           <div className="hero-text">
             <div className="citation">

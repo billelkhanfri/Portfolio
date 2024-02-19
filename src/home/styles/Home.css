@@ -211,30 +211,26 @@
 
 .hero {
   display: flex;
- 
   gap: 20px;
+  position: relative;
 }
+
 .hero-text-wrapper {
   flex: 2;
-
   display: flex;
-  justify-content: center; 
-  align-items: center; 
- 
+  justify-content: center;
+  align-items: center;
 }
+
 .hero-text {
   color: #333;
-  
 }
-
-
 
 .hero-text h2 {
   font-size: 20px;
   font-weight: 600;
   line-height: 36px;
 }
-
 
 .icons {
   margin-top: 20px;
@@ -246,7 +242,6 @@
 }
 
 .icon {
-
   font-size: 40px;
   color: #333;
 }
@@ -258,7 +253,7 @@
 .hero-image {
   background-color: #dadada;
   flex: 1;
-  border:  2px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   text-align: center;
   border-radius: 0px 25px 0px 25px;
   padding: 4px;
@@ -270,82 +265,64 @@
   object-fit: cover;
   object-position: bottom;
   border-radius: 0px 2px 0px 7px;
-    
-
 }
 
-@media screen and (max-width: 767px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero-text {
-    position: absolute;
-    top: 83%;
-
-    transform: translate(0, -50%);
-    z-index: 1;
-
-    background-color: transparent;
-    display: flex;
-
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  
- 
-  
- 
-  .icons {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    align-self: flex-end;
-  }
-  .icons a {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
-}
 .apostrophe {
   display: flex;
-  width: 6%;
+  width: 5%;
   position: absolute;
- top: -15%;
- left: -1%;
-
-  
+  top: -28%;
+  left: -1%;
 }
 .apostrophe-reversed {
   display: flex;
-  width: 6%;
+  width: 5%;
   position: absolute;
-   bottom: -5%;
- right: 0;
- 
- 
-transform: rotate(180deg);
-  
+  bottom: -28%;
+  right: 0;
+
+  transform: rotate(180deg);
 }
-.citation{
+.citation {
   margin-top: 20px;
   position: relative;
   padding: 30px;
-
 }
-.citation-author{
+.citation-author {
   position: relative;
   padding-left: 30px;
-
 }
-.citation-author p:nth-child(2){
+.citation-author p:nth-child(2) {
   text-align: left;
   color: var(--primary-color);
   font-size: 18px;
   font-weight: 600;
 }
-.citation-author p:nth-child(1){
+.citation-author p:nth-child(1) {
   text-align: left;
   font-size: 18px;
-  
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    
+  }
+  .hero-text {
+    padding: 0px;
+  }
+  .icons {
+    padding: 0;
+    justify-content: center;
+  }
+  .citation,
+  .citation-author {
+    padding: 5px;
+  }
+  .apostrophe {
+  width: 7%;
+}
+.apostrophe-reversed {
+  width: 7%;
+}
 }
