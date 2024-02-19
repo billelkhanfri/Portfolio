@@ -1,7 +1,7 @@
 import PageHeader from "../../common/components/PageHeader";
 import SettingBox from "../../common/components/SettingBox";
 import Education from "../components/Education";
-import Hero from "../components/Hero";
+
 import Separator from "../../common/components/Separator";
 import About from "../components/About";
 import Footer from "../../common/components/Footer";
@@ -12,7 +12,7 @@ function AboutPage() {
     <>
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
-       <Hero></Hero> 
+  
            <About></About>      
 
        <Separator title="Experience" color="var(--primary-color)"></Separator> 

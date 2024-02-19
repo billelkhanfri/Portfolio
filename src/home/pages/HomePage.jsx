@@ -4,6 +4,7 @@ import SettingBox from "../../common/components/SettingBox";
 import { useEffect } from "react";
 import Separator from "../../common/components/Separator";
 import Skills from "../components/Skills";
+import Hero from "../components/Hero";
 import Competences from "../components/Competences";
 import Learning from "../components/Learning";
 //import Ligne from "../../common/components/Ligne";
@@ -38,6 +39,9 @@ const slide4 =
       <SettingBox></SettingBox>
       {/* <Banner></Banner> */}
       <LandSlider slides={slides} />
+      <Separator title="" color="var(--primary-color)"></Separator>
+
+      <Hero></Hero>
 
       <Separator title="SKILLS" color="var(--primary-color)"></Separator>
       <Competences></Competences>

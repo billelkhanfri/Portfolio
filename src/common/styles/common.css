@@ -179,7 +179,7 @@ margin: 0px 16px;
     transition: transform 1s ease-out;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
   .toggle-settings {
     left: 10px;
     top: 80px;
@@ -293,6 +293,12 @@ margin: 0px 16px;
 /* End settings box */
 
 @media screen and (max-width: 991px) {
+  .header-area{
+    padding: 6px 26px;
+  }
+  .header-area .logo{
+   width: 300px;
+  }
   .header-area .toggle-menu {
     display: inline-block;
   }
