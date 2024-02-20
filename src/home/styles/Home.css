@@ -51,11 +51,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-/* start Progress bar */
-.bar-wrapper {
-  width: 75%;
-  margin: 40px auto;
-}
+
 .progress-wrapper {
   display: flex;
   flex-direction: column;
@@ -114,30 +110,61 @@
 
 /* end Progress bar */
 
-/* start Competences */
-
-.competences-container {
-  background-color: red;
-  padding: 50px 0;
-}
-
-.competence {
+/* start Competences slider */
+.slider-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 200px; /* adjust the height as needed */
+  align-items: center;
+  position: relative;
 }
 
-.competence h3 {
-  font-size: 1.5rem;
-  margin-left: 10px;
-  margin-top: 15px;
+.slider {
+  width: 70%;
+  padding: 10px;
+  overflow: hidden;
+
 }
 
-/* Home.scss */
+.inner {
+  display: flex;
 
-/* Center the content of the competence div */
+  cursor: grab;
+ 
+}
+
+
+.competence img {
+  width: 300px;
+
+  padding: 30px;
+  pointer-events: none;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  opacity: 0.8;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+
+  
+  
+}
+
+.left {
+  left: 10%;
+}
+
+.right {
+  right: 10%;
+}
 
 /* Style the HTML5 SVG icon */
 .html-svg {
@@ -265,6 +292,7 @@
   object-fit: cover;
   object-position: bottom;
   border-radius: 0px 2px 0px 7px;
+  box-shadow: 0px 60px 37px -39px rgba(0, 0, 0, 0.37);
 }
 
 .apostrophe {
@@ -306,7 +334,6 @@
 @media screen and (max-width: 767px) {
   .hero {
     flex-direction: column;
-    
   }
   .hero-text {
     padding: 0px;
@@ -320,9 +347,9 @@
     padding: 5px;
   }
   .apostrophe {
-  width: 7%;
-}
-.apostrophe-reversed {
-  width: 7%;
-}
+    width: 7%;
+  }
+  .apostrophe-reversed {
+    width: 7%;
+  }
 }
