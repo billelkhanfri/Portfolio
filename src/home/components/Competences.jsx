@@ -16,39 +16,39 @@ const Competences = () => {
     setm(n.current.scrollWidth - n.current.offsetWidth);
   }, []);
   const handleMoveLeft = () => {
-    n.current.scrollLeft -= 200; // Adjust the value according to your preference
+    n.current.scrollLeft -= 600; 
   };
 
   const handleMoveRight = () => {
-    n.current.scrollLeft += 200; // Adjust the value according to your preference
+    n.current.scrollLeft += 600; 
   };
   const competences = [
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png",
+      icon: <AiFillHtml5 className="html-svg svg-icon" />,
     },
     {
-      icon: "https://e7.pngegg.com/pngimages/188/673/png-clipart-cascading-style-sheets-css3-bootstrap-valid-blue-angle-thumbnail.png",
+      icon: <FaCss3Alt className="css-svg svg-icon" />,
     },
     {
-      icon: "https://w7.pngwing.com/pngs/640/199/png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png",
+      icon: <IoLogoJavascript className="js-svg svg-icon" />,
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png",
+      icon: <DiSass className="scss-svg svg-icon" />,
     },
     {
-      icon: "https://e7.pngegg.com/pngimages/188/673/png-clipart-cascading-style-sheets-css3-bootstrap-valid-blue-angle-thumbnail.png",
+      icon: <DiReact className="react-svg svg-icon" />,
     },
     {
-      icon: "https://w7.pngwing.com/pngs/640/199/png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png",
+      icon: <SiFigma className="figma-svg svg-icon" />,
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png",
+      icon: <SiAdobephotoshop className="adobe-svg svg-icon" />,
     },
     {
-      icon: "https://e7.pngegg.com/pngimages/188/673/png-clipart-cascading-style-sheets-css3-bootstrap-valid-blue-angle-thumbnail.png",
+      icon: <BsGit className="git-svg svg-icon" />,
     },
     {
-      icon: "https://w7.pngwing.com/pngs/640/199/png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png",
+      icon: <BsGithub className="github-svg svg-icon" />,
     },
   ];
 
@@ -61,8 +61,8 @@ const Competences = () => {
           className="inner"
         >
           {competences.map((competence, index) => (
-            <motion.div key={index} className="competence">
-              <img src={competence.icon} alt={`Competence ${index + 1}`} />
+            <motion.div key={index} >
+            {competence.icon} 
             </motion.div>
           ))}
         </motion.div>
