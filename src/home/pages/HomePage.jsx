@@ -9,6 +9,7 @@ import Learning from "../components/Learning";
 import Ligne from "../../common/components/Ligne";
 import Footer from "../../common/components/Footer";
 import LandSlider from "../components/landing/LandSlider";
+import Square from "../../common/components/Square";
 
 function HomePage() {
   useEffect(() => {
@@ -32,26 +33,33 @@ function HomePage() {
       <SettingBox></SettingBox>
       {/* <Banner></Banner> */}
       <LandSlider slides={slides} />
+      <div className="section-one">
+        <Ligne></Ligne>
 
-      <Ligne></Ligne>
-
-      <Hero></Hero>
-     
-      <Separator title="SKILLS" color="var(--primary-color)"></Separator>
-      
-        <Competences></Competences>
-    
-      <Learning></Learning>
-      <Separator title="Niveau" color="var(--primary-color)"></Separator>
-      <div className="bar-wrapper">
-        <Skills value={75} label="HTML" barColor="success" />
-        <Skills value={50} label="CSS" barColor="warning" />
-        <Skills value={50} label="JavaScript" barColor="danger" />
-        <Skills value={40} label="Sass" barColor="danger" />
-        <Skills value={50} label="Figma" barColor="warning" />
-        <Skills value={40} label="Photoshop" barColor="danger" />
+        <Hero></Hero>
+        <Square></Square>
       </div>
+      <div className="section-two">
+        <Separator title="SKILLS" color="var(--primary-color)"></Separator>
 
+        <Competences></Competences>
+      </div>
+      <div className="section-three">
+        <Learning></Learning> <Square></Square>
+      </div>
+      <div className="section-four">
+        <Separator title="Niveau" color="var(--primary-color)"></Separator>
+        <div className="custom-container">
+          <div className="bar-wrapper">
+            <Skills value={75} label="HTML" barColor="success" />
+            <Skills value={50} label="CSS" barColor="warning" />
+            <Skills value={50} label="JavaScript" barColor="danger" />
+            <Skills value={40} label="Sass" barColor="danger" />
+            <Skills value={50} label="Figma" barColor="warning" />
+            <Skills value={40} label="Photoshop" barColor="danger" />
+          </div>
+        </div>
+      </div>
       <Footer></Footer>
     </>
   );

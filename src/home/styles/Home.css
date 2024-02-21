@@ -1,4 +1,5 @@
 /* start Banner */
+
 .banner {
   height: 100vh;
   background-size: cover;
@@ -9,39 +10,39 @@
   justify-content: center;
   transition: background-image 0.5s ease-in-out;
 }
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  text-align: center;
+  z-index: 1;
+
+  h1 {
+    color: var(--text-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-  .content {
-    text-align: center;
-    z-index: 1;
+  p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
 
-    h1 {
-      color: var(--text-color);
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      color:var(--text-color);
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    button {
-      background-color: var(--primary-color);
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      color: var(--text-color);
-    }
+  button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: var(--text-color);
   }
 }
+
 .banner::before {
   content: "";
   position: absolute;
@@ -52,208 +53,16 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.progress-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
+/* end banner */
 
-.label-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.percentage {
-  color: var(--primary-color);
-}
-
-.custom-progress-bar {
-  border-radius: 0.25rem;
-  background-color: #fff;
-  overflow: hidden;
-  height: 22px;
-  border: 1px solid var(--primary-color);
-}
-
-.custom-progress-bar .progress-bar {
-  background-color: var(--primary-color);
-  transition: width 0.5s ease-in-out;
-}
-
-.custom-progress-bar .progress-bar-striped {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.15) 7px,
-    transparent 0,
-    transparent 14px
-  );
-}
-
-.custom-progress-bar .progress-bar-animated {
-  animation: progress-bar-stripes 1s linear infinite;
-}
-
-@keyframes progress-bar-stripes {
-  from {
-    background-position-x: 1rem;
-  }
-  to {
-    background-position-x: 0;
-  }
-}
-
-/* end Progress bar */
-
-/* start Competences slider */
-
-.section-wrapper{
-   background-color: lightgray;
-  height: 500px;
-
-}
-.slider-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  /* background-color: var(--body-color); */
- 
-}
-
-.slider {
-  width: 70%;
-  padding: 10px;
-  overflow: hidden;
-   overflow-x: scroll;
-  scroll-behavior: smooth; /* Add smooth scrolling behavior */
-  white-space: nowrap; /* Ensure icons stay in a single line */
-    scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-
-}
-.slider::-webkit-scrollbar {
-  display: none; /* WebKit */
-}
-
-.inner {
-  display: flex;
-
-  cursor: grab;
- 
-}
-
-
-.competence img {
-  width: 300px;
-
-  padding: 30px;
-  pointer-events: none;
-}
-
-.arrow {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  font-size: 32px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  opacity: 0.8;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-
-  
-  
-}
-
-.left {
-  left: 10%;
-}
-
-.right {
-  right: 10%;
-}
-
-/* Style the HTML5 SVG icon */
-.html-svg {
-  color: #e44d26;
- 
-}
-
-/* Style the CSS3 SVG icon */
-.css-svg {
-  color: #264de4;
-  
-}
-
-/* Style the Figma SVG icon */
-.figma-svg {
-  color: #000;
-  
-}
-
-/* Style the Sass SVG icon */
-.scss-svg {
-  color: #cd6799;
-  
-}
-
-/* Style the JavaScript SVG icon */
-.js-svg {
-  color: #f0db4f;
-  
-}
-
-/* Style the React SVG icon */
-.react-svg {
-  color: #61dafb;
- 
-}
-.adobe-svg {
-  
-  color: #000; /* set the default color for the SVG */
-}
-.git-svg {
-  color: #f05032; /* set the default color for the SVG */
-}
-.github-svg {
-  color: black; /* set the default color for the SVG */
-}
-.node-svg {
-
-  font-size: 10em;
-  color: #68a063; /* set the default color for the SVG */
-}
-.tailwind-svg {
-  margin-top: 50px;
-  font-size: 10em;
-  color: #38b2ac; /* set the default color for the SVG */
-}
-.mongo-svg {
-  margin-top: 50px;
-  font-size: 10em;
-  color: #4db33d; /* set the default color for the SVG */
-}
-.svg-icon{
-padding: 30px;
- font-size: 12em;
- border:3px solid;
- border-radius: 50%;
- margin: 20px;
-
-}
-
-/* end Competences */
+/* ############################################################################# */
 
 /*  start about banner */
+.section-one {
+  background-color: var(--body-color);
+  position: relative;
+  margin-bottom: 70px;
+}
 
 .hero {
   display: flex;
@@ -298,7 +107,7 @@ padding: 30px;
 
 .hero-image {
   background-color: #dadada;
-  flex: 1;
+  flex: 0.8;
   border: 2px solid var(--primary-color);
   text-align: center;
   border-radius: 0px 25px 0px 25px;
@@ -306,10 +115,10 @@ padding: 30px;
 }
 
 .hero-image img {
-  width: 90%;
+  width: 99%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
   border-radius: 0px 2px 0px 7px;
   box-shadow: 0px 60px 37px -39px rgba(0, 0, 0, 0.37);
 }
@@ -350,6 +159,178 @@ padding: 30px;
   font-size: 18px;
 }
 
+/* ############################################################################# */
+
+/* start Competences slider */
+
+.section-two {
+  background-color: var(--body-color);
+  padding: 60px 0px;
+  margin-bottom: 70px;
+}
+.skills-description h2 {
+  font-size: 45px;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+.skills-description p {
+  font-size: 26px;
+  text-transform: capitalize;
+  margin: 20px 0px;
+  line-height: 48px;
+  color: var(--text-color);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: var(--body-color); */
+}
+
+.slider {
+  width: 70%;
+  padding: 10px;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+  white-space: nowrap; /* Ensure icons stay in a single line */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.slider::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.inner {
+  display: flex;
+  cursor: grab;
+}
+
+.competence img {
+  width: 300px;
+  padding: 30px;
+  pointer-events: none;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left {
+  left: 10%;
+}
+
+.right {
+  right: 10%;
+}
+
+/* Style the HTML5 SVG icon */
+.html-svg {
+  color: #e44d26;
+}
+
+/* Style the CSS3 SVG icon */
+.css-svg {
+  color: #264de4;
+}
+
+/* Style the Figma SVG icon */
+.figma-svg {
+  color: #000;
+}
+
+/* Style the Sass SVG icon */
+.scss-svg {
+  color: #cd6799;
+}
+
+/* Style the JavaScript SVG icon */
+.js-svg {
+  color: #f0db4f;
+}
+
+/* Style the React SVG icon */
+.react-svg {
+  color: #61dafb;
+}
+.adobe-svg {
+  color: #000; /* set the default color for the SVG */
+}
+.git-svg {
+  color: #f05032; /* set the default color for the SVG */
+}
+.github-svg {
+  color: black; /* set the default color for the SVG */
+}
+.node-svg {
+  font-size: 10em;
+  color: #68a063; /* set the default color for the SVG */
+}
+.tailwind-svg {
+  margin-top: 50px;
+  font-size: 10em;
+  color: #38b2ac; /* set the default color for the SVG */
+}
+.mongo-svg {
+  margin-top: 50px;
+  font-size: 10em;
+  color: #4db33d; /* set the default color for the SVG */
+}
+.svg-icon {
+  padding: 30px;
+  font-size: 12em;
+  border: 3px solid;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.section-three{
+   background-color: var(--body-color);
+padding-top: 60px;
+  margin-bottom: 70px;
+ 
+
+}
+
+/* end Competences */
+
+/* ############################################################################# */
+
+
+/* start Niveau */
+
+.section-four{
+
+    background-color: var(--body-color);
+padding-top: 60px;
+  margin-bottom: 70px;
+
+}
+
+
+
+
+/* end Niveau */
+
+/* ############################################################################# */
+
+
+
+/* start responsiveness */
+
 @media screen and (max-width: 767px) {
   .hero {
     flex-direction: column;
@@ -372,3 +353,5 @@ padding: 30px;
     width: 7%;
   }
 }
+
+/* ############################################################################# */

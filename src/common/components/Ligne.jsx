@@ -31,7 +31,8 @@ const Wrapper = styled.div`
   display: flex;
   position: relative;
   gap: 10px;
-  margin:80px 0px 0px 0px;
+ padding-top: 80px;
+  position: relative;
 `;
 function Ligne() {
  const [scrollY, setScrollY] = useState(0);

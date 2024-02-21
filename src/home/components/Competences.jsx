@@ -16,11 +16,11 @@ const Competences = () => {
     setm(n.current.scrollWidth - n.current.offsetWidth);
   }, []);
   const handleMoveLeft = () => {
-    n.current.scrollLeft -= 232; 
+    n.current.scrollLeft -= 232;
   };
 
   const handleMoveRight = () => {
-    n.current.scrollLeft += 232; 
+    n.current.scrollLeft += 232;
   };
   const competences = [
     {
@@ -53,36 +53,36 @@ const Competences = () => {
   ];
 
   return (
-    <div className="section-wrapper">
-      <div className="custom-container">
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            ad numquam possimus, doloremque quae, ratione pariatur suscipit
-            reprehenderit modi, sequi perspiciatis impedit neque eos dolorem
-            voluptates omnis. Repellat, consectetur impedit?
-          </p>
-        </div>
-        <motion.div className="slider-container">
-          <motion.div ref={n} className="slider">
-            <motion.div
-              drag="x"
-              dragConstraints={{ right: 0, left: -m }}
-              className="inner"
-            >
-              {competences.map((competence, index) => (
-                <motion.div key={index}>{competence.icon}</motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-          <motion.div className="arrow left" onClick={handleMoveLeft}>
-            <FaArrowLeft />
-          </motion.div>
-          <motion.div className="arrow right" onClick={handleMoveRight}>
-            <FaArrowRight />
+    <div className="custom-container">
+      <div className="skills-description">
+        <h2> Technologies maîtrisées</h2>
+
+        <p>
+          Découvrez les technologies que je maîtrise et qui sont au cœur de mon
+          expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
+          bien plus encore, je suis prêt à relever tous les défis de
+          développement web.
+        </p>
+      </div>
+      <motion.div className="slider-container">
+        <motion.div ref={n} className="slider">
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -m }}
+            className="inner"
+          >
+            {competences.map((competence, index) => (
+              <motion.div key={index}>{competence.icon}</motion.div>
+            ))}
           </motion.div>
         </motion.div>
-      </div>
+        <motion.div className="arrow left" onClick={handleMoveLeft}>
+          <FaArrowLeft />
+        </motion.div>
+        <motion.div className="arrow right" onClick={handleMoveRight}>
+          <FaArrowRight />
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
