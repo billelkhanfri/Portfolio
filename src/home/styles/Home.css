@@ -111,12 +111,19 @@
 /* end Progress bar */
 
 /* start Competences slider */
+
+.section-wrapper{
+   background-color: lightgray;
+  height: 500px;
+
+}
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
+ 
 }
 
 .slider {
@@ -236,8 +243,12 @@ cursor: pointer;
   color: #4db33d; /* set the default color for the SVG */
 }
 .svg-icon{
-padding: 20px;
- font-size: 22em
+padding: 30px;
+ font-size: 12em;
+ border:3px solid;
+ border-radius: 50%;
+ margin: 20px;
+
 }
 
 /* end Competences */
@@ -262,7 +273,7 @@ padding: 20px;
 }
 
 .hero-text h2 {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 36px;
 }
@@ -278,7 +289,7 @@ padding: 20px;
 
 .icon {
   font-size: 40px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .icon:hover {

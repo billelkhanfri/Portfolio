@@ -32,13 +32,15 @@ function HomePage() {
       <SettingBox></SettingBox>
       {/* <Banner></Banner> */}
       <LandSlider slides={slides} />
-      <Separator title="" color="var(--primary-color)"></Separator>
+
       <Ligne></Ligne>
 
       <Hero></Hero>
-
+     
       <Separator title="SKILLS" color="var(--primary-color)"></Separator>
-      <Competences></Competences>
+      
+        <Competences></Competences>
+    
       <Learning></Learning>
       <Separator title="Niveau" color="var(--primary-color)"></Separator>
       <div className="bar-wrapper">

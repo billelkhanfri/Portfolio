@@ -1,37 +1,37 @@
 import  { useState, useEffect } from "react";
 import styled from "styled-components";
 const RectOne = styled.div`
-  width: 130.04px;
-  height: 90px;
+  width: 220px;
+  height: 160px;
   background-color: var(--primary-color);
 `;
 const RecTow = styled.div`
-  width: 45.86px;
-  height: 90px;
+  width: 42px;
+  height: 120px;
   background-color: var(--primary-color);
 `;
 const RecThree = styled.div`
   width: 25.17px;
-  height: 90px;
+  height: 160px;
   background-color: var(--primary-color);
 `;
 const RecFour = styled.div`
   width: 12.1px;
-  height: 90px;
+  height: 120px;
   background-color: var(--primary-color);
 `;
 const RecFive = styled.div`
   width: 4px;
-  height: 90px;
+  height: 160px;
   background-color: var(--primary-color);
 `;
 const Wrapper = styled.div`
-  width: 200px;
-  height: 90px;
-  background-color: white;
+ 
+  background-color: var(--body-color);
   display: flex;
   position: relative;
   gap: 10px;
+  margin:80px 0px 0px 0px;
 `;
 function Ligne() {
  const [scrollY, setScrollY] = useState(0);
@@ -67,7 +67,7 @@ function Ligne() {
  }, [scrollY]);
 
   return (
-    <Wrapper style={{ transform: `translateY(${translateY}px)` }}>
+    <Wrapper >
       <RectOne></RectOne>
       <RecTow></RecTow>
       <RecThree></RecThree>
