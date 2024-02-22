@@ -9,7 +9,35 @@ import { IoLogoJavascript } from "react-icons/io";
 import "../styles/Home.css";
 import { motion } from "framer-motion";
 import front from "../../images/frontEnd.jpeg";
-
+const competences = [
+  {
+    icon: <AiFillHtml5 className="html-svg svg-icon" />,
+  },
+  {
+    icon: <FaCss3Alt className="css-svg svg-icon" />,
+  },
+  {
+    icon: <IoLogoJavascript className="js-svg svg-icon" />,
+  },
+  {
+    icon: <DiSass className="scss-svg svg-icon" />,
+  },
+  {
+    icon: <DiReact className="react-svg svg-icon" />,
+  },
+  {
+    icon: <SiFigma className="figma-svg svg-icon" />,
+  },
+  {
+    icon: <SiAdobephotoshop className="adobe-svg svg-icon" />,
+  },
+  {
+    icon: <BsGit className="git-svg svg-icon" />,
+  },
+  {
+    icon: <BsGithub className="github-svg svg-icon" />,
+  },
+];
 const Competences = () => {
   const [m, setm] = useState(0);
   const n = useRef();
@@ -23,50 +51,22 @@ const Competences = () => {
   const handleMoveRight = () => {
     n.current.scrollLeft += 232;
   };
-  const competences = [
-    {
-      icon: <AiFillHtml5 className="html-svg svg-icon" />,
-    },
-    {
-      icon: <FaCss3Alt className="css-svg svg-icon" />,
-    },
-    {
-      icon: <IoLogoJavascript className="js-svg svg-icon" />,
-    },
-    {
-      icon: <DiSass className="scss-svg svg-icon" />,
-    },
-    {
-      icon: <DiReact className="react-svg svg-icon" />,
-    },
-    {
-      icon: <SiFigma className="figma-svg svg-icon" />,
-    },
-    {
-      icon: <SiAdobephotoshop className="adobe-svg svg-icon" />,
-    },
-    {
-      icon: <BsGit className="git-svg svg-icon" />,
-    },
-    {
-      icon: <BsGithub className="github-svg svg-icon" />,
-    },
-  ];
+  
 
   return (
     <div className="custom-container">
-      <div className="skills-shapes">
-        <div className="skills-square-wrapper">
-          <div className="skills-square"></div>
+      <div className="section-shapes">
+        <div className="section-square-wrapper">
+          <div className="section-square"></div>
           <h2> Technologies maîtrisées</h2>
         </div>
-        <div className="skills-image">
+        <div className="section-image">
           <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
             <img src={front} alt="" />
           </a>
         </div>
       </div>
-      <div className="skills-description">
+      <div className="section-description ">
         <p>
           Découvrez les technologies que je maîtrise et qui sont au cœur de mon
           expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
@@ -80,6 +80,7 @@ const Competences = () => {
             drag="x"
             dragConstraints={{ right: 0, left: -m }}
             className="inner"
+            
           >
             {competences.map((competence, index) => (
               <motion.div key={index}>{competence.icon}</motion.div>
@@ -93,7 +94,6 @@ const Competences = () => {
           <FaArrowRight />
         </motion.div>
       </motion.div>
-      
     </div>
   );
 };
