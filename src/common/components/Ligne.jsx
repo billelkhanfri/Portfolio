@@ -1,8 +1,8 @@
 import  { useState, useEffect } from "react";
 import styled from "styled-components";
 const RectOne = styled.div`
-  width: 220px;
-  height: 160px;
+  width: 180px;
+  height: 120px;
   background-color: var(--primary-color);
 `;
 const RecTow = styled.div`
@@ -12,7 +12,7 @@ const RecTow = styled.div`
 `;
 const RecThree = styled.div`
   width: 25.17px;
-  height: 160px;
+  height: 120px;
   background-color: var(--primary-color);
 `;
 const RecFour = styled.div`
@@ -22,7 +22,7 @@ const RecFour = styled.div`
 `;
 const RecFive = styled.div`
   width: 4px;
-  height: 160px;
+  height: 120px;
   background-color: var(--primary-color);
 `;
 const Wrapper = styled.div`

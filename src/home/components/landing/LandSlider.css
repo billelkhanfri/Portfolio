@@ -124,6 +124,7 @@
   background-color: var(--primary-color);
   width: 45px;
   height: 45px;
+  padding: 6px;
   border: transparent;
   cursor: pointer;
   opacity: 80%;

@@ -10,6 +10,8 @@ import Ligne from "../../common/components/Ligne";
 import Footer from "../../common/components/Footer";
 import LandSlider from "../components/landing/LandSlider";
 import Square from "../../common/components/Square";
+import Ligne_two from "../../common/components/Ligne_two";
+
 
 function HomePage() {
   useEffect(() => {
@@ -43,6 +45,7 @@ function HomePage() {
         <Separator title="SKILLS" color="var(--primary-color)"></Separator>
 
         <Competences></Competences>
+        <Ligne_two></Ligne_two>
       </div>
       <div className="section-three">
         <Learning></Learning> <Square></Square>

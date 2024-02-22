@@ -8,6 +8,7 @@ import { DiSass, DiReact } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import "../styles/Home.css";
 import { motion } from "framer-motion";
+import front from "../../images/frontEnd.jpeg";
 
 const Competences = () => {
   const [m, setm] = useState(0);
@@ -54,9 +55,18 @@ const Competences = () => {
 
   return (
     <div className="custom-container">
+      <div className="skills-shapes">
+        <div className="skills-square-wrapper">
+          <div className="skills-square"></div>
+          <h2> Technologies maîtrisées</h2>
+        </div>
+        <div className="skills-image">
+          <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
+            <img src={front} alt="" />
+          </a>
+        </div>
+      </div>
       <div className="skills-description">
-        <h2> Technologies maîtrisées</h2>
-
         <p>
           Découvrez les technologies que je maîtrise et qui sont au cœur de mon
           expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
@@ -83,6 +93,7 @@ const Competences = () => {
           <FaArrowRight />
         </motion.div>
       </motion.div>
+      
     </div>
   );
 };

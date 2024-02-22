@@ -5,6 +5,7 @@ import Collapse from "./Collapse";
 import ColorsContent from "./ColorsContent";
 import BgContent from "./BgContent";
 import ModeContent from "./ModeContent";
+import Weather from "./weather/Weather";
 
 function SettingBox() {
   const [toggle, setToggle] = useState(false);
@@ -41,6 +42,7 @@ function SettingBox() {
             <ModeContent></ModeContent>
             <Collapse title="Couleurs"> {<ColorsContent />}</Collapse>
             <Collapse title="Backgrounds"> {<BgContent />} </Collapse>
+            <Weather></Weather>
           </div>
         </div>
       )}
