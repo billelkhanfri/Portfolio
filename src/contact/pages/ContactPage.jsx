@@ -1,4 +1,3 @@
-import React from "react";
 import Footer from "../../common/components/Footer";
 import PageHeader from "../../common/components/PageHeader";
 import Section from "../../common/components/Separator";

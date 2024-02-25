@@ -11,6 +11,7 @@ const FooterWrapper = styled.footer`
   //bottom: 0;
   //width: 100%;
   z-index: 1001;
+  width: 100vw;
 `;
 
 const Paragraph = styled.p`

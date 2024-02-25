@@ -1,13 +1,13 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+
 import styled from "styled-components";
 
-const StyledForm = styled(Form)`
+const StyledForm = styled.form`
   max-width: 500px;
   margin: auto;
 `;
 
-const StyledButton = styled(Button)`
+const StyledButton = styled.button`
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   &:hover {
@@ -20,7 +20,7 @@ const StyledButton = styled(Button)`
 const ContactForm = () => {
   return (
     <StyledForm className="mt-5">
-      <Form.Group controlId="formName" className="mb-3">
+      {/* <Form.Group controlId="formName" className="mb-3">
         <Form.Label>Nom</Form.Label>
         <Form.Control type="text" placeholder="Entrez votre nom" />
       </Form.Group>
@@ -37,7 +37,7 @@ const ContactForm = () => {
           rows={6}
           placeholder="Entrez votre message"
         />
-      </Form.Group>
+      </Form.Group> */}
 
       <StyledButton variant="primary" type="submit" className="mb-5">
         Envoyer

@@ -1,116 +1,38 @@
 /*  start about banner */
 
-.hero {
-  background-color: #f9f9f9;
+.about-banner-wrapper {
+  height: 700px;
+  background-image: url("../../images/22615.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
   position: relative;
+  background-size: cover;
+  width: 100vw;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  padding: 50px;
-  background-color: #333;
+.about-container {
+  position: absolute;
+  width: 70%;
+  height: 400px;
+  background-color: white;
+  left: 50%;
+  bottom: -50%;
+  transform: translate(-50%, -10%);
+  z-index: 2;
+  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.2);
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
 
-.hero-text p {
-  font-size: 24px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.hero-text h3 {
-  text-align: left;
-}
 
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.icon {
-  margin: 0 10px;
-  font-size: 24px;
-  color: #333;
-}
 
-.icon:hover {
-  color: #007bff;
-}
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: var(--primary-color);
-  position: relative;
-}
 
-.hero-image img {
-  width: 350px;
-}
 
 @media screen and (max-width: 767px) {
-  
+ 
 
-  .hero-text {
-    position: absolute;
-    top: 83%;
-
-    transform: translate(0, -50%);
-    z-index: 1;
-
-    background-color: transparent;
-    display: flex;
-
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  .left-text {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    align-self: flex-end;
-  }
-  .hero-text p {
-    text-align: left;
-    font-size: medium;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  .hero-text h3 {
-    text-align: left;
-    font-size: larger;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  .hero-text h1 {
-    font-size: 32px;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  .icons {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    align-self: flex-end;
-  }
-  .icons a {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
 }
-
-/*  end about banner */
 
 /* start Education Style*/
 
@@ -261,10 +183,13 @@
 
 /* start timeline*/
 
-.btn-experience {
+.timeline-btn {
   background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  border: none;
   margin-top: 10px;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
 }
 .icon {
   color: #fff;
@@ -272,5 +197,6 @@
 }
 .vertical-timeline-element-description {
   margin-top: 10px;
+  line-height: 26px;
 }
 /* end timeline*/

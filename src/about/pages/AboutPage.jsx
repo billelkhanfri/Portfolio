@@ -6,20 +6,21 @@ import Separator from "../../common/components/Separator";
 import About from "../components/About";
 import Footer from "../../common/components/Footer";
 import Timeline from "../components/TimeLine";
+import AboutBanner from "../components/AboutBanner";
 
 function AboutPage() {
   return (
     <>
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
-  
-           <About></About>      
+<AboutBanner></AboutBanner>
+      <About></About>
 
-       <Separator title="Experience" color="var(--primary-color)"></Separator> 
+      <Separator title="Experience" color="var(--primary-color)"></Separator>
 
-         {/* <Timeline></Timeline>   
-       <Separator title="Education" color="var(--bs-blue)"></Separator> 
-       <Education></Education>    */}
+      <Timeline></Timeline>
+      <Separator title="Education" color="var(--bs-blue)"></Separator>
+      <Education></Education>
       <Footer></Footer>
     </>
   );

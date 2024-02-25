@@ -4,7 +4,6 @@ import ProjectPage from "../src/projects/pages/ProjectPage";
 import AboutPage from "../src/about/pages/AboutPage";
 import ContactPage from "../src/contact/pages/ContactPage";
 import "./styles/main.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

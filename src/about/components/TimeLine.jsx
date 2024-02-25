@@ -1,4 +1,3 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,6 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import timelineData from "../timeline.json";
+import "../styles/about.css";
 
 const Timeline = () => {
   let schoolStyle = { background: "var(--primary-color)" };
@@ -26,14 +26,14 @@ const Timeline = () => {
             {event.description}
           </div>
 
-          <div>
+          {/* <div>
             <button
-              className=" btn btn-experience btn-primary"
+              className=" timeline-btn"
               onClick={event.onClick}
             >
               {event.buttonText}
             </button>
-          </div>
+          </div> */}
         </VerticalTimelineElement>
       ))}
     </VerticalTimeline>

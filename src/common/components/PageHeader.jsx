@@ -5,7 +5,7 @@ import Container from "./Container";
 
 function pageHeader() {
   return (
-    <Container>
+    <Container >
       <div className="header-area">
         <Logo />
         <Navigation />

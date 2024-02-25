@@ -53,15 +53,11 @@ function HomePage() {
       <div className="section-four">
         <Separator title="Niveau" color="var(--primary-color)"></Separator>
         <div className="custom-container">
-          <div className="bar-wrapper">
-            <Skills value={75} label="HTML" barColor="success" />
-            <Skills value={50} label="CSS" barColor="warning" />
-            <Skills value={50} label="JavaScript" barColor="danger" />
-            <Skills value={40} label="Sass" barColor="danger" />
-            <Skills value={50} label="Figma" barColor="warning" />
-            <Skills value={40} label="Photoshop" barColor="danger" />
+          
+            <Skills  />
+           
           </div>
-        </div>
+        
       </div>
       <Footer></Footer>
     </>

@@ -17,6 +17,7 @@
 }
 /* end Avatar*/
 
+/* ############################################################################ */
 
 .wrapper {
   width: 100%;
@@ -24,7 +25,7 @@
 }
 
 .header-area {
-  position: relative;
+  position: fixed;
   z-index: 2;
   color: var(--text-color);
   display: flex;
@@ -33,8 +34,9 @@
   height: 70px;
   justify-content: space-between;
   background-color: var(--header-color);
+  width: 100vw;
   .logo {
-   width: 200px;
+    width: 200px;
     align-self: center;
     font-weight: bold;
     font-size: 18px;
@@ -45,9 +47,9 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    
+
     li {
-margin: 0px 16px;     
+      margin: 0px 16px;
       a {
         color: var(--text-color);
         text-decoration: none;
@@ -55,12 +57,10 @@ margin: 0px 16px;
         font-size: 16.5px;
         font-weight: 550;
         letter-spacing: 1.1px;
-   
-       
+
         &:hover,
         &.active {
           color: var(--primary-color);
-          
         }
       }
     }
@@ -68,7 +68,6 @@ margin: 0px 16px;
   .links-container {
     width: 100%;
     text-align: right;
-    
   }
   .toggle-menu {
     width: 40px;
@@ -106,7 +105,7 @@ margin: 0px 16px;
   margin-bottom: 4px;
 }
 /* End Header area */
-
+/* ############################################################################ */
 
 .button {
   display: inline-block;
@@ -133,9 +132,11 @@ margin: 0px 16px;
   &:hover,
   &.active {
     background-color: white;
-    color: var(--primary-color)!important;
+    color: var(--primary-color) !important;
   }
 }
+
+/* ############################################################################ */
 
 .settings-box {
   position: fixed;
@@ -174,6 +175,8 @@ margin: 0px 16px;
   padding: 3px;
   background-color: white;
   border-radius: 4px;
+  width: 40px;
+  height: 40px;
   .toggle-settings {
     transform: translateX(0);
     transition: transform 1s ease-out;
@@ -292,12 +295,37 @@ margin: 0px 16px;
 }
 /* End settings box */
 
+/* ############################################################################ */
+/* start typing effect */
+.cursor-span {
+  color: var(--primary-color);
+  text-align: left;
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+.cursor-span::after {
+  content: "|";
+
+  background-color: var(--primary-color);
+  animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* end typing effect */
+
+/* ############################################################################ */
+
 @media screen and (max-width: 991px) {
-  .header-area{
+  .header-area {
     padding: 6px 26px;
   }
-  .header-area .logo{
-   width: 300px;
+  .header-area .logo {
+    width: 300px;
   }
   .header-area .toggle-menu {
     display: inline-block;
@@ -311,15 +339,14 @@ margin: 0px 16px;
     font-weight: bold;
     transition: 0.3s;
   }
-  .links-container{
+  .links-container {
     justify-content: space-between;
- 
   }
   .closed-icone {
     width: 52px;
     height: 52px;
   }
-  .links{
+  .links {
     opacity: 0;
     height: 0;
     overflow: hidden;
@@ -333,7 +360,7 @@ margin: 0px 16px;
   .toggle-menu {
     display: block;
   }
- 
+
   .links.open {
     display: block;
     background-color: var(--body-color);
@@ -345,10 +372,10 @@ margin: 0px 16px;
     opacity: 1;
     height: auto;
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-padding: 0;
+    padding: 0;
   }
 
-  li  {
+  li {
     font-size: 18px;
     padding: 16px;
     border: 1px solid transparent;
@@ -373,7 +400,4 @@ padding: 0;
   }
 }
 @media screen and (max-width: 425px) {
-  
- 
-  
 }

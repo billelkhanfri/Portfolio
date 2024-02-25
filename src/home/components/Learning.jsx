@@ -1,4 +1,10 @@
-import { SiTailwindcss, SiMongodb } from "react-icons/si";
+import {
+  SiMongodb,
+  SiLeaflet,
+  SiFirebase,
+  SiAdobeillustrator,
+
+} from "react-icons/si";
 
 import { IoLogoNodejs } from "react-icons/io";
 import "../styles/Home.css";
@@ -10,14 +16,26 @@ const learning = [
     language: "NODE JS",
     p: "Lorem ipsum dolor sit amet.",
   },
-  {
-    icon: <SiTailwindcss className="tailwind-svg svg-icon-learn" />,
-    language: "TAILWIND",
-    p: "Lorem ipsum dolor sit amet.",
-  },
+
   {
     icon: <SiMongodb className="mongo-svg svg-icon-learn" />,
     language: "MongoDB",
+    p: "Lorem ipsum dolor sit amet.",
+  },
+
+  {
+    icon: <SiLeaflet className="leaflet-svg svg-icon-learn" />,
+    language: "LEAFLET",
+    p: "Lorem ipsum dolor sit amet.",
+  },
+  {
+    icon: <SiFirebase className="firebase-svg svg-icon-learn" />,
+    language: "FIREBASE",
+    p: "Lorem ipsum dolor sit amet.",
+  },
+  {
+    icon: <SiAdobeillustrator className="ai-svg svg-icon-learn" />,
+    language: "ILLUSTRATOR",
     p: "Lorem ipsum dolor sit amet.",
   },
 ];

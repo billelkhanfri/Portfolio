@@ -1,10 +1,9 @@
 import Billel from "../../images/Billel-profile-picture.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import apostrophe from "../../images/apostrophe.svg";
 import { useState, useEffect } from "react";
-
 import { FiMail } from "react-icons/fi";
 import "../styles/Home.css";
+import TypingEffect from "../../common/components/TypingEffect";
 function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -127,7 +126,8 @@ function Hero() {
             </div>
             <div className="citation-author">
               <p>Billel KHANFRI</p>
-              <p>Développeur Frontend </p>
+
+              <TypingEffect typedText=" Développeur Frontend "></TypingEffect>
             </div>
 
             <div className="icons">
