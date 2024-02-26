@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
-  width: 90%;
-  margin: auto;
-  height: 400px;
-  background-color: white;
-  margin-top: -40px;
-  z-index: 1001;
+width: 90%;
+margin: auto;
+max-width: 1440px;
   box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.2);
+  margin-top: -60px;
+  margin-bottom: 0px;
+  padding: 15px 15px 15px 15px;
+  background-color: white;
 `;
 
 const AboutTitle = styled.h2`

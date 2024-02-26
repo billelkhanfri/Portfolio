@@ -11,7 +11,7 @@ import Footer from "../../common/components/Footer";
 import LandSlider from "../components/landing/LandSlider";
 import Square from "../../common/components/Square";
 import Ligne_two from "../../common/components/Ligne_two";
-import Ligne_left from "../../common/components/ligne_left";
+import Ligne_left from "../../common/components/Ligne_left";
 
 function HomePage() {
   useEffect(() => {

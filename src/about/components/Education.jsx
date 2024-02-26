@@ -10,7 +10,7 @@ import { IoSchoolSharp } from "react-icons/io5";
 import timelineData from "../education.json";
 
 const Education = () => {
-  let schoolStyle = { background: "var(--bs-blue" };
+  let schoolStyle = { background: "var(--primary-color" };
   return (
     <VerticalTimeline>
       {timelineData.map((event) => (
