@@ -8,11 +8,11 @@ const learning = [
     icon: <SiTailwindcss className="tailwind-svg svg-icon-skill" />,
     language: "TAILWIND",
     p: "Lorem ipsum dolor sit amet.",
-    bg : "bg-one",
+    bg: "bg-one",
   },
 
   {
-    icon: <SiPhp className="php-svg svg-icon-skils" />,
+    icon: <SiPhp className="php-svg svg-icon-skill" />,
     language: "PHP",
     p: "Lorem ipsum dolor sit amet.",
   },
@@ -45,16 +45,17 @@ function Skills() {
         </p>
       </div>
       <div className="learning-wrapper">
-       
-        
-          <div className="learning-competence" >
-            <div className={learning[0].bg}> 
-            {learning[0].icon}
-            <h3> {learning[0].language}</h3>
-            <p>{learning[0].p} </p>
+        {learning.map((learn, index) => (
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">{learn.icon} </div>
+              <div class="flip-card-back">
+                <h1>{learn.language}</h1>
+                <p>{learn.p}</p>
+              </div>
+            </div>
           </div>
-          </div>
-       
+        ))}
       </div>
     </div>
   );

@@ -6,12 +6,15 @@ const FooterWrapper = styled.footer`
   background-color: #292929;
   color: #fff;
   padding: 20px 0;
-  text-align: center;
-  // position: fixed;
-  //bottom: 0;
-  //width: 100%;
+
+
   z-index: 1001;
   width: 100vw;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  gap: 20px;
 `;
 
 const Paragraph = styled.p`
@@ -31,6 +34,9 @@ const Link = styled.a`
     color: var(--primary-color);
   }
 `;
+const Links_wrapper = styled.div`
+
+`
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,6 +45,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <Paragraph>Connectez-vous avec moi :</Paragraph>
+      <Links_wrapper> 
       <Link
         href="https://www.linkedin.com/"
         target="_blank"
@@ -55,7 +62,8 @@ const Footer = () => {
       </Link>
       <Link href="mailto:khanfri.billel@yahoo.fr">
         <FiMail />
-      </Link>
+        </Link>
+        </Links_wrapper>
       <Paragraph>{copyright}</Paragraph>
     </FooterWrapper>
   );

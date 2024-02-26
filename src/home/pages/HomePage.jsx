@@ -11,7 +11,7 @@ import Footer from "../../common/components/Footer";
 import LandSlider from "../components/landing/LandSlider";
 import Square from "../../common/components/Square";
 import Ligne_two from "../../common/components/Ligne_two";
-
+import Ligne_left from "../../common/components/ligne_left";
 
 function HomePage() {
   useEffect(() => {
@@ -49,15 +49,14 @@ function HomePage() {
       </div>
       <div className="section-three">
         <Learning></Learning> <Square></Square>
+        <Ligne_left></Ligne_left>
+      </div>
+      <div className="section-four">
+        <Skills />
       </div>
       <div className="section-four">
         <Separator title="Niveau" color="var(--primary-color)"></Separator>
-        <div className="custom-container">
-          
-            <Skills  />
-           
-          </div>
-        
+        <div className="custom-container"></div>
       </div>
       <Footer></Footer>
     </>

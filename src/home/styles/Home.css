@@ -387,18 +387,12 @@
 .node-svg {
   color: #68a063;
 }
-.tailwind-svg {
-  color: #38b2ac;
-}
+
 .mongo-svg {
   color: #4db33d;
 }
-.php-svg {
-  color: #4f5d95;
-}
-.mysql-svg {
-  color: #0078d6;
-}
+
+
 .leaflet-svg {
   color: green;
 }
@@ -415,6 +409,46 @@
 /* ############################################################################# */
 
 /* start Niveau */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
 
 .section-four {
   background-color: var(--body-color);
@@ -422,33 +456,29 @@
   margin-bottom: 70px;
   width: 100vw;
 }
-
-.bg-one {
-  position: relative;
-  background-color: red;
-  transform: skew(-10deg);
+.tailwind-svg {
+  color: #38b2ac;
 }
 
-.bg-one::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 2%;
-  width: 5%;
-  background-color: var(--body-color);
+.php-svg {
+  color: #4f5d95;
 }
-.bg-one::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 10%;
-  width: 5%;
-  background-color: var(--body-color);
+.mysql-svg {
+  color: #0078d6;
 }
+
 
 .svg-icon-skill {
+   width: 300px;
+  height: 300px;
+  font-size: 48em;
+
+  box-shadow: 0px 75px 45px -75px rgb(0 0 0 / 60%);
+  border: 5px solid rf;
+  padding: 10px;
+  /* animation: float 1.4s ease-in-out infinite; */
+  margin-bottom: 20px;
+
 }
 
 /* end Niveau */
