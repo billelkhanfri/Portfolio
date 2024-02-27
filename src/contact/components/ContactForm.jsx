@@ -1,48 +1,75 @@
-import React from "react";
+import { db } from "../../../firebase.js";
+import { useState } from "react";
+import { addDoc, collection } from "firebase/firestore";
 
-import styled from "styled-components";
-
-const StyledForm = styled.form`
-  max-width: 500px;
-  margin: auto;
-`;
-
-const StyledButton = styled.button`
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  &:hover {
-    color: var(--primary-color);
-    background-color: white;
-    border-color: white;
-  }
-`;
+import "../styles/contact.css";
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const userCollectionRef = collection(db, "contactdata");
+
+  const handleSubmit = () => {
+    addDoc(userCollectionRef, {
+      name: name,
+      email: email,
+      message: message,
+    })
+      .then(() => {
+        if (!alert("Message envoyé avec succès"))
+          document.location = "https://www.google.com";
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+  };
+
   return (
-    <StyledForm className="mt-5">
-      {/* <Form.Group controlId="formName" className="mb-3">
-        <Form.Label>Nom</Form.Label>
-        <Form.Control type="text" placeholder="Entrez votre nom" />
-      </Form.Group>
-
-      <Form.Group controlId="formEmail" className="mb-3">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Entrez votre email" />
-      </Form.Group>
-
-      <Form.Group controlId="formMessage" className="mb-3">
-        <Form.Label>Message</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={6}
-          placeholder="Entrez votre message"
+    <div className="outer-container">
+      <p>Contact Form</p>
+      <form action="" className="contactform">
+        <label htmlFor="name"> Nom et prénom</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Nom"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
         />
-      </Form.Group> */}
 
-      <StyledButton variant="primary" type="submit" className="mb-5">
-        Envoyer
-      </StyledButton>
-    </StyledForm>
+        <label htmlFor="email">Email </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          cols="30"
+          rows="10"
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
+        >
+          Message
+        </textarea>
+        <button type="button" onClick={handleSubmit}>
+          {" "}
+          Envoyer
+        </button>
+      </form>
+    </div>
   );
 };
 
