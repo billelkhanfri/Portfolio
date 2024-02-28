@@ -3,32 +3,29 @@ import "./LandSlider.css";
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ currentIndex, setCurrentIndex }) => {
- const initialContent = [
-   {
-     h4: " découvrez notre centre culturel musulman",
+const initialContent = [
+  {
+    h4: "Développement Front-end",
+    h1: "Conception et développement d'interfaces utilisateur interactives",
+    p: "Expérience approfondie dans la création d'expériences utilisateur réactives et conviviales en utilisant HTML, CSS, JavaScript et des frameworks comme React.js.",
+  },
+  {
+    h4: "Développement Back-end",
+    h1: "Construction de serveurs robustes et évolutifs",
+    p: "Maîtrise des technologies back-end telles que Node.js et MongoDB pour développer des applications web performantes et extensibles.",
+  },
+  {
+    h4: "Base de données et Stockage",
+    h1: "Gestion et optimisation des données",
+    p: "Expérience dans la conception de schémas de base de données efficaces, l'optimisation des requêtes et l'intégration de solutions de stockage comme MongoDB et Firebase.",
+  },
+  {
+    h4: "Design et UI/UX",
+    h1: "Création d'expériences utilisateur attrayantes",
+    p: "Compétences en conception graphique avec des outils tels que Photoshop et Illustrator, ainsi qu'une sensibilité pour l'ergonomie et l'expérience utilisateur.",
+  },
+];
 
-     h1: "Explorez le projet React",
-     p: "Découvrez la puissance de React dans la création d'applications web interactives et dynamiques. Explorez l'architecture basée sur les composants, la gestion d'état et les dernières fonctionnalités du développement web moderne.",
-   },
-   {
-     h4: " découvrez notre centre culturel musulman",
-
-     h1: "Explorez le projet JavaScript",
-     p: "Entamez un voyage pour explorer les profondeurs de JavaScript, le langage du web. Apprenez la manipulation du DOM, la programmation asynchrone et la multitude de bibliothèques et de frameworks disponibles.",
-   },
-   {
-     h4: " découvrez notre centre culturel musulman",
-
-     h1: "Explorez le projet API",
-     p: "Plongez dans le royaume des APIs et exploitez la puissance de la connectivité des données. Construisez des applications qui récupèrent et manipulent des données à partir de sources externes, permettant une intégration transparente et un contenu dynamique.",
-   },
-   {
-     h4: " découvrez notre centre culturel musulman",
-
-     h1: "Explorez le projet WordPress",
-     p: "Plongez dans le monde de WordPress et découvrez la flexibilité et la scalabilité qu'il offre pour la création de sites web et de blogs. Personnalisez les thèmes, étendez les fonctionnalités avec des plugins et libérez votre créativité en toute simplicité.",
-   },
- ];
 
 
   // Utilisez maintenant 'baladesToulon' dans votre application ou site web pour présenter les différentes balades numériques sur la ville de Toulon.

@@ -41,7 +41,7 @@ function ModeContent() {
   };
   const handelLighttMode = () => {
     const root = document.documentElement;
-    root.style.setProperty("--body-color", "#f2f2f2");
+    root.style.setProperty("--body-color", "#f9f9f9");
     root.style.setProperty("--header-color", "#fffffff5");
     root.style.setProperty("--text-color", "#333333");
   };

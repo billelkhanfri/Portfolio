@@ -6,8 +6,6 @@ const FooterWrapper = styled.footer`
   background-color: #292929;
   color: #fff;
   padding: 20px 0;
-
-
   z-index: 1001;
   width: 100vw;
   display:flex;
@@ -15,6 +13,7 @@ const FooterWrapper = styled.footer`
   justify-content:center;
   align-items:center;
   gap: 20px;
+ 
 `;
 
 const Paragraph = styled.p`

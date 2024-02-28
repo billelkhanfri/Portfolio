@@ -7,7 +7,7 @@
     justify-content: center; 
     max-width: 1440px;
     width: 100vw;
-    height: 50vh;}
+    height: 100vh;}
 .outer-container p {
   color: var(--primary-color);
   font-size: 45px;
@@ -63,7 +63,7 @@ input[type=text], input[type=email], select, textarea {
 
 
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: var(--primary-color);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -72,10 +72,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: white;
+  color: var(--primary-color);
 }
 
-.container {
+.containerform {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;

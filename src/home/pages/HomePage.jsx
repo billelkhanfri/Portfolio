@@ -54,10 +54,7 @@ function HomePage() {
       <div className="section-four">
         <Skills />
       </div>
-      <div className="section-four">
-        <Separator title="Niveau" color="var(--primary-color)"></Separator>
-        <div className="custom-container"></div>
-      </div>
+      
       <Footer></Footer>
     </>
   );

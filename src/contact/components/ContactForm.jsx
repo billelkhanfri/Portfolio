@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <div className="outer-container">
-      <div className="container">
+      <div className="containerform">
         <p>Contact Form</p>
         <form action="">
           <label htmlFor="name"> Nom et prénom</label>

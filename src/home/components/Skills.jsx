@@ -7,21 +7,21 @@ const learning = [
   {
     icon: <SiTailwindcss className="tailwind-svg svg-icon-skill" />,
     language: "TAILWIND",
-    p: "Lorem ipsum dolor sit amet.",
+    p: "20%",
     bg: "bg-one",
   },
-
   {
     icon: <SiPhp className="php-svg svg-icon-skill" />,
     language: "PHP",
-    p: "Lorem ipsum dolor sit amet.",
+    p: "25%",
   },
   {
     icon: <SiMysql className="mysql-svg svg-icon-skill" />,
     language: "MYSQL",
-    p: "Lorem ipsum dolor sit amet.",
+    p: "30%",
   },
 ];
+
 function Skills() {
   return (
     <div className="custom-container">
@@ -46,10 +46,10 @@ function Skills() {
       </div>
       <div className="learning-wrapper">
         {learning.map((learn, index) => (
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">{learn.icon} </div>
-              <div class="flip-card-back">
+          <div className="flip-card" key={index}>
+            <div className="flip-card-inner">
+              <div className="flip-card-front">{learn.icon}</div>
+              <div className="flip-card-back">
                 <h1>{learn.language}</h1>
                 <p>{learn.p}</p>
               </div>
