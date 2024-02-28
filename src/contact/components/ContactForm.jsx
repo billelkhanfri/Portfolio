@@ -28,47 +28,46 @@ const ContactForm = () => {
 
   return (
     <div className="outer-container">
-      <p>Contact Form</p>
-      <form action="" className="contactform">
-        <label htmlFor="name"> Nom et prénom</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Nom"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-
-        <label htmlFor="email">Email </label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          cols="30"
-          rows="10"
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        >
-          Message
-        </textarea>
-        <button type="button" onClick={handleSubmit}>
-          {" "}
-          Envoyer
-        </button>
-      </form>
+      <div className="container">
+        <p>Contact Form</p>
+        <form action="">
+          <label htmlFor="name"> Nom et prénom</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Nom"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+          <label htmlFor="email">Email </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            cols="30"
+            rows="10"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            style={{ height: 200 }}
+            defaultValue={""}
+          >
+            Message
+          </textarea>
+          <input type="submit" onClick={handleSubmit} defaultValue=" Envoyer" />{" "}
+        </form>
+      </div>
     </div>
   );
 };
