@@ -1,20 +1,21 @@
-import React from 'react'
-import challenge from "../../images/challenges.jpg";
 
 
-function ProjectCard() {
+function ProjectCard({tech, name,id,image}) {
+  
+
   return (
     <>
       <div className="thumb">
-        <div className="th-wrapper">
-          <div className="coup-coeur-vignette">
-            <p>Nom du project</p>
+        <div className="thumb-wrappers">
+          <div className="project-title">
+            <p>{name}</p>
           </div>
-
-          <img className="thum-img" src={challenge} alt="" />
+       
+            <img className="thum-img" src={image} alt="" />{" "}
+      
           <div className="text-wrapper">
             <div>
-              <h2>Technologie</h2>
+              <h2>{tech}</h2>
             </div>
           </div>
         </div>

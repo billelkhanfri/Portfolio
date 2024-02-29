@@ -78,9 +78,8 @@
   font-size: 24px;
 }
 
-.th-wrapper {
-padding-top: 80px;
-
+.thumb-wrappers {
+  height: 300px;
 }
 
 .thum-img {
@@ -102,7 +101,7 @@ padding-top: 80px;
   font-size: 28px;
 }
 
-.coup-coeur-vignette {
+.project-title {
   position: absolute;
   background-color: var(--color-secondary);
   padding: 3px 8px;
@@ -113,7 +112,7 @@ padding-top: 80px;
   z-index: 2;
 }
 
-.coup-coeur-vignette p {
+.project-title p {
   font-size: 13px;
   font-weight: 400;
 }
