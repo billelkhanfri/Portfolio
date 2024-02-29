@@ -1,7 +1,10 @@
 import "../styles/Home.css";
 
-import { SiTailwindcss, SiPhp, SiMysql } from "react-icons/si";
-import challenge from "../../images/challenges.jpg";
+import { SiTailwindcss, SiPhp, SiMysql, SiFuturelearn } from "react-icons/si";
+import { GiStairsGoal } from "react-icons/gi";
+import { GoGoal } from "react-icons/go";
+
+import challenge from "../../images/learning-curve.jpg";
 
 const learning = [
   {
@@ -9,16 +12,19 @@ const learning = [
     language: "TAILWIND",
     p: "20%",
     bg: "bg-one",
+    progress: <GiStairsGoal className="progress-icon" />,
   },
   {
     icon: <SiPhp className="php-svg svg-icon-skill" />,
     language: "PHP",
     p: "25%",
+    progress: <SiFuturelearn className="progress-icon" />,
   },
   {
     icon: <SiMysql className="mysql-svg svg-icon-skill" />,
     language: "MYSQL",
     p: "30%",
+    progress: <GoGoal className="progress-icon" />,
   },
 ];
 
@@ -52,6 +58,7 @@ function Skills() {
               <div className="flip-card-back">
                 <h1>{learn.language}</h1>
                 <p>{learn.p}</p>
+                {learn.progress}
               </div>
             </div>
           </div>

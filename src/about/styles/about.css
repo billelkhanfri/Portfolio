@@ -20,8 +20,8 @@
 }
 .slider-word {
   color: white;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 900;
   animation: slideIn 1s ease-out;
 display: none;}
 .slider-word.active{

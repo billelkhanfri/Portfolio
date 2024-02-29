@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "../styles/about.css";
 
-const words = ["word1", "word2", "word3", "word4"];
+const words = ["Conception", "Frontend", "Backend", "Adobe..."];
 
 function WordSlider() {
   const [currentinex, setCurrentIndex] = useState(0);
@@ -16,7 +16,7 @@ function WordSlider() {
   return (
     <>
       {words.map((word, index) => (
-        <p  key={index} className={currentinex === index?"slider-word active" :"slider-word"}>{word}</p>
+        <h2  key={index} className={currentinex === index?"slider-word active" :"slider-word"}>{word}</h2>
       ))}
     </>
   );
