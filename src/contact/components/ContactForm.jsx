@@ -61,7 +61,6 @@ const ContactForm = () => {
               setMessage(e.target.value);
             }}
             style={{ height: 200 }}
-            defaultValue={""}
           >
             Message
           </textarea>
