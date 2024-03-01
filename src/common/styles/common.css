@@ -104,6 +104,36 @@
   height: 4px;
   margin-bottom: 4px;
 }
+.gear-wrapper {
+  position: relative;
+ 
+}
+
+.submenu {
+  position: absolute;
+  width: 200px;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--header-color);
+  background-color: red;
+  padding: 30px;
+ 
+  transition: all 0.5s ease-in-out;
+}
+
+.gear-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.gear-icon:hover {
+  color: var(--primary-color);
+}
+
+
 /* End Header area */
 /* ############################################################################ */
 

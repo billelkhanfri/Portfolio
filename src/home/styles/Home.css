@@ -488,7 +488,8 @@
   margin-bottom: 20px;
 }
 .progress-icon {
-  font-size: 48em;
+  width: 60px;
+  height: 60px;
 
   box-shadow: 0px 75px 45px -75px rgb(0 0 0 / 60%);
 

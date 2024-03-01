@@ -1,13 +1,22 @@
 import "../styles/common.css";
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
+import { CiSettings } from "react-icons/ci";
+import ModeContent from "./ModeContent";
+
+
 
 
 
 function Navigation() {
-   const [menuOpen, setMeuOpen] = useState(false);
+  const [menuOpen, setMeuOpen] = useState(false);
+  const [subMenu, setSubmenu] = useState(false);
+
+  const showSubMenu = () => {
+    setSubmenu(true)
+  }
+   
    const toggleMenu = () => {
      setMeuOpen(!menuOpen);
    };
@@ -34,7 +43,20 @@ function Navigation() {
             Contact
           </NavLink>
         </li>
-       
+        <li>
+          <div
+            className="gear-wrapper"
+            onMouseEnter={showSubMenu}
+            
+          >
+            <CiSettings className="gear-icon" />
+            {subMenu && <div className="submenu">
+                <ModeContent></ModeContent>
+              </div>
+            } 
+              
+          </div>
+        </li>
       </ul>
       {/* <button className="toggle-menu">
         <GiHamburgerMenu className="menu"></GiHamburgerMenu>

@@ -25,7 +25,7 @@ function ProjectPage() {
         } catch (error) {
           console.error("Error fetching data from Firebase:", error);
         }
-        console.log(data);
+      
       };
 
       fetchData();
