@@ -7,7 +7,7 @@ const initialContent = [
   {
     h4: "Développement Front-end",
     h1: "Conception et développement d'interfaces utilisateur interactives",
-    p: "Expérience approfondie dans la création d'expériences utilisateur réactives et conviviales en utilisant HTML, CSS, JavaScript et des frameworks comme React.js.",
+    p: "Expérience approfondie dans la création d'expériences utilisateur réactives et conviviales en utilisant HTML, CSS, JavaScript et un Librairie comme React.js.",
   },
   {
     h4: "Développement Back-end",
@@ -45,7 +45,7 @@ const initialContent = [
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % initialContent.length);
-    }, 7000);
+    }, 6000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);

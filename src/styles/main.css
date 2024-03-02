@@ -1,7 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  background-color: #e3e3e3;
+  background-color: var(--body-color);
 }
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --primary-color: #ff9800;
+   --primary-color: #2ECC40; 
   --secondary-color: #e5e5e5;
   --color-golden: #dcca87;
   --color-footer: #00372a;

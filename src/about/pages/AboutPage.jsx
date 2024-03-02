@@ -13,14 +13,13 @@ function AboutPage() {
     <>
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
-<AboutBanner></AboutBanner>
+      <AboutBanner></AboutBanner>
       <About></About>
+        <Separator title="Experience" color="var(--primary-color)"></Separator>
 
-      <Separator title="Experience" color="var(--primary-color)"></Separator>
-
-      <Timeline></Timeline>
-      <Separator title="Education" color="var(--bs-blue)"></Separator>
-      <Education></Education>
+        <Timeline></Timeline>
+        <Separator title="Education" color="var(--bs-blue)"></Separator>
+        <Education></Education>
       <Footer></Footer>
     </>
   );

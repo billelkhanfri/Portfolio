@@ -7,7 +7,9 @@
     justify-content: center; 
     max-width: 1440px;
     width: 100vw;
-    height: 100vh;}
+    height: 100vh;
+  margin: auto;
+ }
 .outer-container p {
   color: var(--primary-color);
   font-size: 45px;
@@ -49,7 +51,9 @@ font-weight: 700;
 } */
 
 
-
+label {
+  color: var(--text-color);
+}
 input[type=text], input[type=email], select, textarea {
   width: 100%;
   padding: 12px;
@@ -77,7 +81,7 @@ input[type=submit]:hover {
 }
 
 .containerform {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--body-color);
+  padding: 60px;
 }

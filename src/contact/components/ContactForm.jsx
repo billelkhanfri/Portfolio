@@ -42,7 +42,7 @@ const ContactForm = () => {
   return (
     <div className="outer-container">
       <div className="containerform">
-        <p>Contact Form</p>
+        <p>CONTACTEZ MOI</p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name"> Nom et prénom</label>
           <input

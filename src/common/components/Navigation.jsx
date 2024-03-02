@@ -2,24 +2,14 @@ import "../styles/common.css";
 import { NavLink } from "react-router-dom";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
 import { useState } from "react";
-import { CiSettings } from "react-icons/ci";
 import ModeContent from "./ModeContent";
-
-
-
-
 
 function Navigation() {
   const [menuOpen, setMeuOpen] = useState(false);
-  const [subMenu, setSubmenu] = useState(false);
 
-  const showSubMenu = () => {
-    setSubmenu(true)
-  }
-   
-   const toggleMenu = () => {
-     setMeuOpen(!menuOpen);
-   };
+  const toggleMenu = () => {
+    setMeuOpen(!menuOpen);
+  };
   return (
     <nav className="links-container">
       <ul className={` links ${menuOpen ? "open" : ""}`}>
@@ -44,18 +34,7 @@ function Navigation() {
           </NavLink>
         </li>
         <li>
-          <div
-            className="gear-wrapper"
-            onMouseEnter={showSubMenu}
-            
-          >
-            <CiSettings className="gear-icon" />
-            {subMenu && <div className="submenu">
-                <ModeContent></ModeContent>
-              </div>
-            } 
-              
-          </div>
+          <ModeContent></ModeContent>
         </li>
       </ul>
       {/* <button className="toggle-menu">

@@ -43,18 +43,23 @@ function HomePage() {
       </div>
       <div className="section-two">
         <Separator title="SKILLS" color="var(--primary-color)"></Separator>
-
-        <Competences></Competences>
+        <Learning></Learning>
         <Ligne_two></Ligne_two>
       </div>
       <div className="section-three">
-        <Learning></Learning> <Square></Square>
+        <Separator title="MERN" color="var(--primary-color)"></Separator>
+
+        <Competences></Competences>
+        <Square></Square>
+
         <Ligne_left></Ligne_left>
       </div>
       <div className="section-four">
+        <Separator title="IN PROGRESS" color="var(--primary-color)"></Separator>
+
         <Skills />
       </div>
-      
+
       <Footer></Footer>
     </>
   );

@@ -31,10 +31,10 @@ const learning = [
 function Skills() {
   return (
     <div className="custom-container">
-      <div className="section-shapes section-shapes-reverted">
-        <div className="section-square-wrapper reverted-square">
+      <div className="section-shapes section-shapes">
+        <div className="section-square-wrapper ">
           <div className="section-square"></div>
-          <h2>Technologies en apprentissage</h2>
+          <h2>Technologies en Cours de Maîtrise</h2>
         </div>
         <div className="section-image">
           <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
@@ -44,10 +44,15 @@ function Skills() {
       </div>
       <div className="section-description">
         <p>
-          Découvrez les technologies que je maîtrise et qui sont au cœur de mon
-          expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
-          bien plus encore, je suis prêt à relever tous les défis de
-          développement web.
+          Je me concentre actuellement sur l'expansion de mes compétences
+          techniques. Maîtrisant PHP, MySQL, Bootstrap, Sass et Tailwind, je
+          développe des applications web dynamiques avec des interfaces
+          réactives et esthétiques. En parallèle, j'explorer les possibilités
+          offertes par des bibliothèques modernes telles que Material UI pour
+          créer des expériences utilisateur innovantes et interactives. Ma
+          démarche consiste à appliquer activement ces compétences dans des
+          projets concrets, enrichissant ainsi mon savoir-faire dans le domaine
+          du développement web.
         </p>
       </div>
       <div className="learning-wrapper">

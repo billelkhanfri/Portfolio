@@ -5,10 +5,12 @@ import Container from "./Container";
 
 function pageHeader() {
   return (
-    <Container >
+    <Container>
       <div className="header-area">
-        <Logo />
-        <Navigation />
+        <div className="navigation-wrapper">
+          <Logo />
+          <Navigation />
+        </div>
       </div>
     </Container>
   );

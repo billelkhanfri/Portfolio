@@ -28,13 +28,17 @@
   position: fixed;
   z-index: 2;
   color: var(--text-color);
-  display: flex;
-  align-items: center;
-  padding: 6px 76px;
-  height: 70px;
-  justify-content: space-between;
   background-color: var(--header-color);
   width: 100vw;
+  .navigation-wrapper{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+  }
   .logo {
     width: 200px;
     align-self: center;
@@ -49,6 +53,7 @@
     align-items: center;
 
     li {
+      cursor: pointer;
       margin: 0px 16px;
       a {
         color: var(--text-color);
@@ -104,34 +109,7 @@
   height: 4px;
   margin-bottom: 4px;
 }
-.gear-wrapper {
-  position: relative;
- 
-}
 
-.submenu {
-  position: absolute;
-  width: 200px;
-  top: -8px;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  background-color: var(--header-color);
-  background-color: red;
-  padding: 30px;
- 
-  transition: all 0.5s ease-in-out;
-}
-
-.gear-icon {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.gear-icon:hover {
-  color: var(--primary-color);
-}
 
 
 /* End Header area */
@@ -168,10 +146,12 @@
 
 /* ############################################################################ */
 
+
+
 .settings-box {
   position: fixed;
-  left: 0px; /* start offscreen */
-  top: 0px;
+  left: 0px; 
+  top: 60px;
   background-color: rgba(245, 245, 245, 0.45);
   backdrop-filter: blur(10px);
   border-right: 1px solid #d8d8d8;
@@ -179,69 +159,44 @@
   width: 240px;
   min-height: 100vh;
   padding: 0 14px;
-  transition: transform 1s ease-out;
-  .settings-container {
-    margin-top: 42px;
-  }
+  transition: transform 0.5s ease-in-out; 
+  transform: translateX(-240px); 
 }
 
-.toggle-settings--open {
-  transform: translateX(168px);
-  transition: transform 0.4s ease-out;
-}
-
-/* Add a class to trigger the animation */
 .settings-box-open {
-  transform: translateX(240px);
+  transform: translateX(0); 
 }
+
 
 .toggle-settings {
   position: fixed;
   left: 72px;
-  top: 60px;
+  top: 10px;
   text-align: center;
   cursor: pointer;
   z-index: 1001;
-  padding: 3px;
-  background-color: white;
   border-radius: 4px;
-  width: 40px;
-  height: 40px;
-  .toggle-settings {
-    transform: translateX(0);
-    transition: transform 1s ease-out;
-  }
+  transition: transform 0.5s ease-out;
+ 
 }
 @media screen and (max-width: 767px) {
   .toggle-settings {
     left: 10px;
-    top: 80px;
+    top: 15px;
   }
-  .toggle-settings--open {
-    left: 72px;
-    top: 80px;
-  }
+ 
 }
 
 .gear {
-  font-size: 34px;
+  font-size: 36px;
+  padding: 0 !important;
   color: var(--primary-color);
   z-index: 3000;
   cursor: pointer;
 }
-.gear.active {
-  animation: rotate 2.5s infinite linear;
-  animation-play-state: running;
-}
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
 
 .settings-box .option-box {
   background-color: #f1f1f1;
@@ -351,11 +306,12 @@
 /* ############################################################################ */
 
 @media screen and (max-width: 991px) {
-  .header-area {
+ .header-area {
     padding: 6px 26px;
   }
   .header-area .logo {
     width: 300px;
+    margin-left: 20px;
   }
   .header-area .toggle-menu {
     display: inline-block;
@@ -405,11 +361,11 @@
     padding: 0;
   }
 
-  li {
+  .links-conatiner li {
     font-size: 18px;
     padding: 16px;
     border: 1px solid transparent;
-    border-bottom-color: var(--color-hover);
+    border-bottom-color: var(--primary-color);
     text-align: center;
     margin: 0;
   }

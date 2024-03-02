@@ -6,17 +6,30 @@ const ColorBullets = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
+const Title = styled.h2`
+  font-size: 14px;
+  font-weight: 500;
+`;
 const Bullet = styled.div`
   width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  height: 12px;
+ 
   background-color: ${(props) => props.color};
-  margin: 0 5px;
+  margin:5px;
   cursor: pointer;
   opacity: ${(props) => (props.active ? 1 : 0.3)};
   border: ${(props) => (props.active ? "1px solid gray " : " none")};
 `;
+  const TitleWrapper = styled.div  `
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 25px;
+  padding: 0 12px;`
 
 function ColorsContent(props) {
   const [activeBullet, setActiveBullet] = useState(0);
@@ -35,9 +48,8 @@ function ColorsContent(props) {
       const index = [
         "#FF9800",
         "#0074D9",
-        "#FFDC00",
         "#2ECC40",
-        "#FF4136",
+       
       ].indexOf(savedColor);
       if (index > -1) {
         setActiveBullet(index);
@@ -46,35 +58,33 @@ function ColorsContent(props) {
   }, []);
 
   return (
-    <div>
-      <ColorBullets>
-        <Bullet
-          color="#FF9800"
-          active={activeBullet === 0}
-          onClick={() => handleClick(0, "#FF9800")}
-        />
-        <Bullet
-          color="#0074D9"
-          active={activeBullet === 1}
-          onClick={() => handleClick(1, "#0074D9")}
-        />
-        <Bullet
-          color="#FFDC00"
-          active={activeBullet === 2}
-          onClick={() => handleClick(2, "#FFDC00")}
-        />
-        <Bullet
-          color="#2ECC40"
-          active={activeBullet === 3}
-          onClick={() => handleClick(3, "#2ECC40")}
-        />
-        <Bullet
-          color="#FF4136"
-          active={activeBullet === 4}
-          onClick={() => handleClick(4, "#FF4136")}
-        />
-      </ColorBullets>
-    </div>
+    <>
+      <TitleWrapper>
+        {" "}
+        <Title>Couleur primaire</Title>
+      </TitleWrapper>
+
+      <div>
+        <ColorBullets>
+          <Bullet
+            color="#FF9800"
+            active={activeBullet === 0}
+            onClick={() => handleClick(0, "#FF9800")}
+          />
+          <Bullet
+            color="#0074D9"
+            active={activeBullet === 1}
+            onClick={() => handleClick(1, "#0074D9")}
+          />
+
+          <Bullet
+            color="#2ECC40"
+            active={activeBullet === 3}
+            onClick={() => handleClick(3, "#2ECC40")}
+          />
+        </ColorBullets>
+      </div>
+    </>
   );
 }
 

@@ -95,11 +95,12 @@
   align-items: center;
   padding-left: 30px;
   gap: 30px;
+fill: red;
 }
 
 .icon {
   font-size: 40px;
-  color: var(--text-color);
+  fill: var(--text-color);
 }
 
 .icon:hover {
@@ -223,8 +224,7 @@
 }
 
 .slider {
-  width: 90%;
-  padding: 10px;
+  width: 84%;
   overflow: hidden;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -245,6 +245,7 @@
   width: 300px;
   padding: 30px;
   pointer-events: none;
+  
 }
 
 .arrow {
@@ -308,15 +309,27 @@
 .github-svg {
   color: black; /* set the default color for the SVG */
 }
-
+.wordpress-svg{
+  background-color: rgb( 34, 101, 141);
+  color: white;
+}
+.tech-title{
+  padding: 20px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
 .svg-icon {
   padding: 30px;
-  font-size: 12em;
+  font-size: 15em;
   border: 3px solid;
   border-radius: 50%;
   margin: 20px;
-}
 
+}
+.competence-div{
+  width: 280px;
+  height: 280px;
+}
 .section-three {
   background-color: var(--body-color);
   padding-top: 60px;
@@ -332,10 +345,47 @@
 
 .learning-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;
   justify-items: center;
+  margin-top: 40px;
+}
+.language-wrapper {
+  padding: 32px;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+    border: 1px solid rgb(218, 217, 217);
+
+    margin-top: 40px;
+
+}
+.language-list{
+  padding: 8px;
+  margin-left: 50px;
+    list-style-type:square;
+    position: relative;
+
+}
+
+.title-arrow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
+}
+.first-arrow{
+  height: 2.25rem;
+  width: 2.25rem;
+  fill: var(--primary-color);
+
+}
+.arrow-collapse{
+  fill: var(--primary-color);
+   height: 1.25rem;
+  width: 1.25rem;
 }
 .section-shapes-reverted {
   flex-direction: row-reverse;
@@ -350,9 +400,9 @@
   flex-direction: column;
 }
 .learning-competence h3 {
-  font-size: 24px;
+  font-size: 16px;
   margin: 0px 0px 8px;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .learning-competence p {
@@ -372,8 +422,8 @@
 }
 
 .svg-icon-learn {
-  width: 300px;
-  height: 300px;
+   max-width: 150px;
+  max-height: 150px; 
   font-size: 48em;
   border: 3px solid;
   border-radius: 50%;
@@ -401,6 +451,18 @@
   background-color: rgb(252, 136, 9);
   color: rgb(37, 1, 3);
 }
+.ps-svg {
+  background-color:  rgb(49, 152, 254);
+  color: rgb(9, 27, 45);
+}
+
+.language-item{
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+  padding:  8px ;
+
+}
 
 /* end learning */
 
@@ -411,6 +473,7 @@
   background-color: transparent;
   width: 300px;
   height: 300px;
+  border-radius: 50%;
   perspective: 1000px;
 }
 
@@ -424,6 +487,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #f4f4f4;
   border-radius: 10px;
+    border-radius: 50%;
+
 }
 
 .flip-card:hover .flip-card-inner {
@@ -437,6 +502,8 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+    border-radius: 50%;
+
 }
 
 .flip-card-front {
