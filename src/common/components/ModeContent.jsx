@@ -2,7 +2,7 @@ import { useState } from "react";
 import { VscColorMode } from "react-icons/vsc";
 
 function ModeContent() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);

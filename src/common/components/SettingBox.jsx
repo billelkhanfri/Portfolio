@@ -36,6 +36,7 @@ function SettingBox() {
       
         <div className={`settings-box ${toggle ? "settings-box-open" : ""}`}>
           <div className="settings-container">
+            <h2>Widgets</h2>
             <Weather></Weather>
           </div>
         </div>

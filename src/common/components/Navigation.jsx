@@ -13,24 +13,24 @@ function Navigation() {
 
   return (
     <nav className="links-container">
-      <ul className={`links ${menuOpen ? "open" : ""}`}>
+      <ul className={`links ${menuOpen ? "open" : "closed"}`}>
         <li>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" activeclassname="active">
             Accueil
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="active">
+          <NavLink to="/about" activeclassname="active">
             A propos
           </NavLink>
         </li>
         <li>
-          <NavLink to="/projects" activeClassName="active">
+          <NavLink to="/projects" activeclassname="active">
             Projets
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active" className="contact">
+          <NavLink to="/contact" activeclassname="active" className="contact">
             Contact
           </NavLink>
         </li>

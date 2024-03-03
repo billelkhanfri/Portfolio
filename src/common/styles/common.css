@@ -33,6 +33,7 @@
   .navigation-wrapper{
     max-width: 1440px;
     width: 82%;
+    padding: 20px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -56,7 +57,7 @@
 
     li {
       cursor: pointer;
-      margin: 0px 16px;
+      margin-left: 48px;
         float: left;
 
       a {
@@ -107,7 +108,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  color: white ;
+  color: white !important ;
 
   &:hover,
   &.active {
@@ -117,7 +118,28 @@
 }
 
 /* ############################################################################ */
+.settings-container{
+  padding-top: 60px;
+  width: 100%;
+  margin: auto;
+}
 
+.settings-container h2{
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+.settings-container h2:after{
+ content: "";
+ width: 50px;
+ height: 6px;
+ background-color: var(--primary-color);
+ position: absolute;
+ bottom: -10px;
+ left: 36%;
+ transform: translate(-50%, 50%);
+}
 
 
 .settings-box {
@@ -152,11 +174,19 @@
  
 }
 @media screen and (max-width: 767px) {
+
+.header-area   .navigation-wrapper{   
+    width: 90%;
+    padding: 20px;
+
+  }
+
+
   .toggle-settings {
     left: 10px;
     top: 15px;
   }
- 
+
 }
 
 .gear {
@@ -278,12 +308,10 @@
 /* ############################################################################ */
 
 @media screen and (max-width: 991px) {
- .header-area {
-    padding: 6px 26px;
-  }
+
   .header-area .logo {
     width: 300px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .header-area .toggle-menu {
     display: inline-block;
@@ -315,11 +343,11 @@
   width: 100%;
   text-align: center;
   left: 0;
-  top: 70px;
+  top: 60px;
   padding: 0;
   max-width: auto;
   display: block;
-   animation: accordiant 0.4s ease-out forwards;
+   animation: accordiant 0.4s ease-out  ;
 
 
 }
@@ -336,7 +364,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-              animation: accordiant  0.6s ease-out forwards;
+              animation: accordiant  0.6s ease-out ;
 
 
   
@@ -368,6 +396,22 @@
   }
 }
 
+ .links-container .links.open li {
+    font-size: 16px;
+    padding: 20px 16px;
+    color: white;
+    width: 100%;
+    margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+              animation: accordiant  0.6s ease-out ;
+
+
+  
+  }
+
+
     .links-container .links.open li:not(:last-child) {
     border-bottom: 1px solid #C2D5001C;;
     }
@@ -384,7 +428,7 @@
 
   }
   .links.open li  a.contact.active {
-    color: var(--text-color);
+    color: var(--hover-color);
     background-color: transparent;
   }
 }

@@ -15,6 +15,7 @@ const SectionWrapper = styled.div`
   text-align: center;
   margin: 0 px40px;
   border-radius: 5px;
+  background-color: #dbdbdb;
 `;
 
 

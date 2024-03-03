@@ -5,15 +5,16 @@ function ProjectCard({ tech, name, id, image }) {
     <>
       <Link to={`/project/${id}`} key={`${id}`}>
         <div className="thumb">
-          <div className="thumb-wrappers">
+          <div className="image-div">
+            <img className="thum-img" src={image} alt="" />
+          </div>
+<div className="card-separator"></div>
+          <div className="project-tag">
             <div className="project-title">
               <p>{name}</p>
             </div>
-            <img className="thum-img" src={image} alt="" />{" "}
             <div className="text-wrapper">
-              <div>
-                <h2>{tech}</h2>
-              </div>
+              <h2>{tech}</h2>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 body {
-  font-family: "Montserrat", sans-serif;
   width: 100%;
   background-color: var(--body-color);
+  font-family: "Open Sans", sans-serif;
+
+  
 }
 * {
   box-sizing: border-box;
@@ -18,13 +20,24 @@ body {
   --hover-color: #c2d500;
   --color-secondary: #7dcaa0;
   --color-border: #dadee3;
-  --body-color: #f9f9f9;
+  /* --body-color: #f9f9f9;
   --header-color: #fffffff5;
-  --text-color: #333333;
+  --text-color: #333333; */
+  --body-color: #333333;
+    --header-color: #00000095;
+    --text-color: #fff;
 }
 .custom-container {
   max-width: 1440px;
   width: 82%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 60px 20px;
 }
+@media screen  and ( max-width: 475px) {
+  .custom-container {
+  
+  width: 90%;
+ 
+}
+}
+  
