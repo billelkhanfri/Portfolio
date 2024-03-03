@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Pic from "../../images/about-banner.jpg";
 const AboutContainer = styled.div`
-  width: 90%;
+  width: 82%;
   margin: auto;
   max-width: 1440px;
   box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.2);

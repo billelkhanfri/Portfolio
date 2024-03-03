@@ -13,9 +13,9 @@ body {
    --primary-color: #2ECC40; 
   --secondary-color: #e5e5e5;
   --color-golden: #dcca87;
-  --color-footer: #00372a;
+  --footer-color: #00372a;
   --color-blog: #042c54;
-  --color-hover: #c2d500;
+  --hover-color: #c2d500;
   --color-secondary: #7dcaa0;
   --color-border: #dadee3;
   --body-color: #f9f9f9;
@@ -24,6 +24,7 @@ body {
 }
 .custom-container {
   max-width: 1440px;
+  width: 82%;
   margin: 0 auto;
   padding: 20px;
 }

@@ -3,7 +3,7 @@ import { FiMail } from "react-icons/fi";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background-color: #292929;
+  background-color: var(--footer-color);
   color: #fff;
   padding: 20px 0;
   z-index: 1001;
@@ -30,7 +30,7 @@ const Link = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--primary-color);
+    color: var(--hover-color);
   }
 `;
 const Links_wrapper = styled.div`

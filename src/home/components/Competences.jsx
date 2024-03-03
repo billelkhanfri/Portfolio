@@ -49,11 +49,11 @@ const Competences = () => {
     setm(n.current.scrollWidth - n.current.offsetWidth);
   }, []);
   const handleMoveLeft = () => {
-    n.current.scrollLeft -= 280;
+    n.current.scrollLeft -= 260;
   };
 
   const handleMoveRight = () => {
-    n.current.scrollLeft += 280;
+    n.current.scrollLeft += 260;
   };
 
   return (

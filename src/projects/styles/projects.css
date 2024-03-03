@@ -1,17 +1,17 @@
 .thumbs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 16px; /* Changed to padding for consistent spacing */
   border-radius: 20px;
-  row-gap: 20px;
+   row-gap: 20px;
   -moz-column-gap: 20px;
-  column-gap: 20px;
+  column-gap: 20px; 
 
-  /* Center the container horizontally and vertically */
-  justify-content: center;
-  align-items: center;
-  max-width: 1024px;
+ 
+   width: 80%;
+  max-width: 1440px;
+
   margin: auto;
+
 }
 
 @media screen and (max-width: 425px) {
@@ -78,9 +78,7 @@
   font-size: 24px;
 }
 
-.thumb-wrappers {
-  height: 300px;
-}
+
 
 .thum-img {
   width: 100%;

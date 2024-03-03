@@ -55,7 +55,7 @@ function Skills() {
           du développement web.
         </p>
       </div>
-      <div className="learning-wrapper">
+      <div className="fliped-wrapper">
         {learning.map((learn, index) => (
           <div className="flip-card" key={index}>
             <div className="flip-card-inner">

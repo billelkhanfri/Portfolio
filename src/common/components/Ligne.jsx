@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   display: flex;
   position: relative;
   gap: 10px;
- padding-top: 80px;
+ padding-top: 30px;
   position: relative;
 `;
 function Ligne() {

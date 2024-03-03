@@ -163,7 +163,6 @@ fill: red;
 
 .section-two {
   background-color: var(--body-color);
-  padding: 60px 0px;
   margin-bottom: 70px;
   position: relative;
   width: 100vw;
@@ -220,11 +219,11 @@ fill: red;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* background-color: var(--body-color); */
+  
 }
 
 .slider {
-  width: 84%;
+  width: 82%;
   overflow: hidden;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -255,7 +254,7 @@ fill: red;
   font-size: 32px;
   border-radius: 50%;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--body-color);
   opacity: 0.8;
   display: flex;
   justify-content: center;
@@ -323,13 +322,49 @@ fill: red;
   font-size: 15em;
   border: 3px solid;
   border-radius: 50%;
-  margin: 20px;
+  margin-right: 20px;
 
 }
 .competence-div{
-  width: 280px;
-  height: 280px;
+  width: 327.59px;
+  height: 327.59px;
 }
+@media screen and (max-width: 475px) {
+ .slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 260px; 
+
+}
+
+.slider {
+  width: 260px;
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+
+.competence-div {
+  display: inline-block; 
+  width: 260px; 
+  height: 260px; 
+  margin: auto;
+}
+
+.svg-icon {
+  width: 260px; 
+  height: 260px; 
+  object-fit: cover;
+  margin: auto;
+}
+
+}
+  
+
 .section-three {
   background-color: var(--body-color);
   padding-top: 60px;
@@ -469,6 +504,16 @@ fill: red;
 /* ############################################################################# */
 
 /* start Niveau */
+
+
+.fliped-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
 .flip-card {
   background-color: transparent;
   width: 300px;
