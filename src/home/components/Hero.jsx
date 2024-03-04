@@ -107,7 +107,7 @@ function Hero() {
                 <FaLinkedin className="icon linkedin" />
               </a>
               <a href="mailto:khanfri.billel@yahoo.fr">
-                <FiMail className="icon" />
+                <FiMail className="icon mail" />
               </a>
             </div>
           </div>

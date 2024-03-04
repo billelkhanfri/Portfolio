@@ -6,6 +6,7 @@ import Separator from "../../common/components/Separator";
 import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../../firebase.js";
+import ProjectBanner from "../helpers/ProjectBanner.jsx";
 
 
 function ProjectPage() {
@@ -34,13 +35,18 @@ function ProjectPage() {
     <>
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
+      <div className="project-banner-wrapper">
+        <div className="project-container">
+          <ProjectBanner></ProjectBanner>
+        </div>
+      </div>
       <div className="th-wrapper">
         <Separator title="PROJETS" color="var(--primary-color)"></Separator>
 
         <div className="thumbs-container">
           {data &&
             data.map((item) => (
-                <ProjectCard
+              <ProjectCard
                 key={item.id}
                 image={item.image}
                 name={item.name}

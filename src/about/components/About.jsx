@@ -11,6 +11,7 @@ const AboutContainer = styled.div`
   background-color: white;
   display: flex;
   gap: 20px;
+  margin-bottom:30px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;

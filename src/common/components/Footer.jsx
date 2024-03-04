@@ -3,7 +3,7 @@ import { FiMail } from "react-icons/fi";
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background-color: var(--footer-color);
+  background-color: var(--separate-color);
   color: #fff;
   padding: 20px 0;
   z-index: 1001;
@@ -18,12 +18,12 @@ const FooterWrapper = styled.footer`
 
 const Paragraph = styled.p`
   font-size: 18px;
-  color: white;
+  color: #00372a;
   margin-top: 10px;
 `;
 
 const Link = styled.a`
-  color: #fff;
+  color: #00372a;
   text-decoration: none;
   margin: 10px 20px;
   font-size: 30px;

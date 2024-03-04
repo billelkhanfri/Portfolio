@@ -100,7 +100,7 @@
 
 .icon {
   font-size: 40px;
-  fill: var(--text-color);
+  color: var(--text-color);
 }
 
 .icon:hover {
@@ -488,6 +488,13 @@
   padding: 8px;
 }
 
+@media screen and (max-width : 475px){
+  .learning-wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  
+}
+}
+
 /* end learning */
 
 /* ############################################################################# */
@@ -518,7 +525,7 @@
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #f4f4f4;
+  background-color: var(--separate-color);
   border-radius: 10px;
   border-radius: 50%;
 }
@@ -559,7 +566,7 @@
 
 .section-four {
   background-color: var(--body-color);
-  padding-top: 60px;
+  padding-top: 90px;
   width: 100vw;
 }
 .tailwind-svg {

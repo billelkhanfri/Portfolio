@@ -26,6 +26,7 @@ body {
   --body-color: #333333;
     --header-color: #00000095;
     --text-color: #fff;
+    --separate-color: #dbdbdb
 }
 .custom-container {
   max-width: 1440px;

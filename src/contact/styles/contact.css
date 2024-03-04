@@ -12,7 +12,7 @@
  }
 .outer-container p {
   color: var(--primary-color);
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 40px;
   text-align: center;
@@ -83,5 +83,4 @@ input[type=submit]:hover {
 .containerform {
   border-radius: 8px;
   background-color: var(--body-color);
-  padding: 60px;
 }
