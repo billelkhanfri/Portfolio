@@ -1,7 +1,7 @@
-import React from 'react'
 import { useParams } from "react-router-dom";
 import PageHeader from "../../common/components/PageHeader";
 import SettingBox from "../../common/components/SettingBox";
+import "../styles/projects.css"
 
 
 
@@ -11,7 +11,9 @@ function Project() {
       <>
         <SettingBox></SettingBox>
         <PageHeader> </PageHeader>
-            <div>Project { param.projectId}</div>
+        <div className="projectContainer">
+          <div>Project id : {param.projectId} <br/> Desing en cours ...</div>
+        </div>
       </>
     );
 }

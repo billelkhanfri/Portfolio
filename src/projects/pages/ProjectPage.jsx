@@ -9,28 +9,36 @@ import { db } from "../../../firebase.js";
 import ProjectBanner from "../helpers/ProjectBanner.jsx";
 
 
-function ProjectPage() {
-    const [data, setData] = useState([]);
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const querySnapshot = await getDocs(
-            collection(db, "projects")
-          );
-          const newData = querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }));
-          setData(newData);
-          
-        } catch (error) {
-          console.error("Error fetching data from Firebase:", error);
-        }
-      
-      };
 
-      fetchData();
-    }, []); 
+function ProjectPage() {
+  const [firebaseData, setFirebaseData] = useState([]);
+  const [githubData, setGithubData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch data from Firebase
+        const firebaseQuerySnapshot = await getDocs(collection(db, "projects"));
+        const firebaseNewData = firebaseQuerySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setFirebaseData(firebaseNewData);
+
+        // Fetch data from GitHub API
+        const githubResponse = await fetch(
+          "https://api.github.com/users/billelkhanfri/repos"
+        );
+        const githubData = await githubResponse.json();
+        setGithubData(githubData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+      console.log(githubData);
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
       <SettingBox></SettingBox>
@@ -40,21 +48,20 @@ function ProjectPage() {
           <ProjectBanner></ProjectBanner>
         </div>
       </div>
-      <div className="th-wrapper">
-        <Separator title="PROJETS" color="var(--primary-color)"></Separator>
 
-        <div className="thumbs-container">
-          {data &&
-            data.map((item) => (
-              <ProjectCard
-                key={item.id}
-                image={item.image}
-                name={item.name}
-                id={item.id}
-                tech={item.tech}
-              />
-            ))}
-        </div>
+      <Separator title="PROJETS" color="var(--primary-color)"></Separator>
+
+      <div className="thumbs-container">
+        {githubData &&
+          githubData.map((item) => (
+            <ProjectCard
+              key={item.id}
+              name={item.name}
+              image={firebaseData.find((repo) => repo.name === item.name)?.image}
+              id={item.id}
+              tech={item.tech}
+            />
+          ))}
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+
 .thumbs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -6,10 +7,9 @@
   -moz-column-gap: 20px;
   column-gap: 20px;
   width: 82%;
-  max-width: 1440px;
+  max-width: 1024px;
   margin: auto;
   padding-top: 30px;
-  
 }
 .thumbs-container a {
   text-decoration: none;
@@ -25,18 +25,33 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-   
-      border-radius: 8px;
-
-
-;
+  border-radius: 8px;
+  position: relative;
 }
+.thumb::before {
+  position: absolute;
+  content: " Détails du projet";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+  background-color: rgb( 27, 27, 27);
+  z-index: 2000;
+  opacity: 0;
+  font-size: 32px;
+  font-weight: 600;
+  transition:  opacity 0.3s ease-in-out;
+}
+ .thumb:hover::before{
+opacity: 0.9;}
 
 .image-div {
   width: 100%;
   height: 300px;
   position: relative;
-
 }
 .image-div:before {
   content: "";
@@ -45,7 +60,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #ffcc00 3%, #ffcc00ce 10%, #ffcc0000 45%);
+  background: linear-gradient(to top, #4d5050e4 3%, #4d5050da 5%, #4d505000 45%);
   /* background: linear-gradient(to top, #a6dab2 3%, #a6dab2e9 10%, #a6dab200 45%); */
 }
 
@@ -57,19 +72,19 @@
   object-fit: cover;
   border-radius: 8px;
   object-position: center;
+    border-radius:   8px 8px 0px 0px;
+
 }
-.card-separator {
+/* .card-separator {
   width: 100%;
   height: 20px;
-  background-color: #ffcc00;
-}
+  background-color: #4d5050;
+} */
 .text-wrapper h2 {
   font-weight: 400;
   font-size: 18px;
-  
-
 }
-a{
+a {
   text-decoration: non;
 }
 .project-tag {
@@ -79,13 +94,12 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E6B907;
-  border-radius: Opx 0px 8px 8px
-;
-    color: black;
+  background-color: #FFBF00;
+  border-radius:  0px 0px 8px 8px;
+  color: #333333;
 }
 .project-tag .project-title {
-  background-color: #838383;
+  background-color: #333333;
   border-radius: 4px;
   color: white;
 }
@@ -123,14 +137,14 @@ a{
   align-items: center;
 }
 
-.slider-word {
-  color: white;
-  font-size: 60px;
-  font-weight: 900;
+.slide-word {
+  color: #333333;
+  font-size: 12vw;
+  font-weight: 800;
   animation: slideIn 1s ease-out;
   display: none;
 }
-.slider-word.active {
+.slide-word.active {
   display: block;
 }
 
@@ -146,5 +160,24 @@ a{
   }
 }
 
-/* start banner */
+/* end banner */
+
+
+
+
 /* ############################################################################# */
+
+
+
+
+/* start individual project */
+.projectContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}

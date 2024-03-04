@@ -30,7 +30,7 @@ const Link = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--hover-color);
+    color: var(--primary-color);
   }
 `;
 const Links_wrapper = styled.div`
