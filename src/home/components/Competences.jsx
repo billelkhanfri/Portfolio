@@ -12,6 +12,7 @@ import { SiPwa } from "react-icons/si";
 import "../styles/Home.css";
 import { motion } from "framer-motion";
 import front from "../../images/frontEnd.jpeg";
+import DescriptionReverted from "../../common/components/DescriptionReverted";
 const competences = [
   {
     icon: <SiMongodb className="mongo-svg svg-icon" />,
@@ -58,25 +59,14 @@ const Competences = () => {
 
   return (
     <div className="custom-container">
-      <div className="section-shapes section-shapes-reverted">
-        <div className="section-square-wrapper reverted-square">
-          <div className="section-square"></div>
-          <h2> Environement</h2>
-        </div>
-        <div className="section-image">
-          <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
-            <img src={front} alt="" />
-          </a>
-        </div>
-      </div>
-      <div className="section-description ">
-        <p>
-          Découvrez les technologies que je maîtrise et qui sont au cœur de mon
-          expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
-          bien plus encore, je suis prêt à relever tous les défis de
-          développement web.
-        </p>
-      </div>
+      <DescriptionReverted
+        title={"Environement"}
+        image={front}
+        description={
+          " Découvrez les technologies que je maîtrise et qui sont au cœur de mon expertise. Avec une solide expérience dans HTML, CSS, JavaScript, etbien plus encore, je suis prêt à relever tous les défis de développement web."
+        }
+      ></DescriptionReverted>
+
       <motion.div className="slider-container">
         <motion.div ref={n} className="slider">
           <motion.div

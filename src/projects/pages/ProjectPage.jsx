@@ -1,18 +1,23 @@
 import PageHeader from "../../common/components/PageHeader";
 import SettingBox from "../../common/components/SettingBox";
 import ProjectCard from "../components/ProjectCard";
-import "../styles/projects.css"
+import "../styles/projects.css";
 import Separator from "../../common/components/Separator";
 import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../../firebase.js";
 import ProjectBanner from "../helpers/ProjectBanner.jsx";
-
-
+import Loader from "../helpers/Loader.jsx";
+import Ligne_left from "../../common/components/Ligne_left";
+import Square from "../../common/components/Square";
+import Description from "../../common/components/Description.jsx";
+import API from "../../images/api.jpg";
 
 function ProjectPage() {
   const [firebaseData, setFirebaseData] = useState([]);
   const [githubData, setGithubData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,15 +31,21 @@ function ProjectPage() {
         setFirebaseData(firebaseNewData);
 
         // Fetch data from GitHub API
-        const githubResponse = await fetch(
-          "https://api.github.com/users/billelkhanfri/repos"
-        );
+
+       const githubResponse = await fetch(
+         "https://api.github.com/users/billelkhanfri/repos",
+         {
+           headers: {
+             Authorization: `Bearer ${accessToken}`,
+           },
+         }
+       );
         const githubData = await githubResponse.json();
         setGithubData(githubData);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-      console.log(githubData);
     };
 
     fetchData();
@@ -48,21 +59,41 @@ function ProjectPage() {
           <ProjectBanner></ProjectBanner>
         </div>
       </div>
-
+      <div className="custom-container">
+        {" "}
+        <Description
+          title={"Projets"}
+          image={API}
+          description={
+            "Ce composant est une page qui affiche une liste de projets récupérés à partir de Firebase et GitHub pour créer une interface utilisateur complète. Les données sont récupérées de Firebase et GitHub via des appels d'API, puis affichées dynamiquement sur la page à l'aide de la logique de rendu conditionnel basée sur l'état de chargement "
+          }
+        ></Description>
+        <Ligne_left></Ligne_left>
+      </div>
       <Separator title="PROJETS" color="var(--primary-color)"></Separator>
 
-      <div className="thumbs-container">
-        {githubData &&
-          githubData.map((item) => (
-            <ProjectCard
-              key={item.id}
-              name={item.name}
-              image={firebaseData.find((repo) => repo.name === item.name)?.image}
-              id={item.id}
-              tech={item.tech}
-            />
-          ))}
-      </div>
+      <Square></Square>
+
+      {loading ? (
+        <Loader></Loader>
+      ) : (
+        <div className="thumbs-container">
+          {githubData &&
+            githubData.map((item) => (
+              <ProjectCard
+                key={item.id}
+                name={item.name}
+                image={
+                  firebaseData.find((repo) => repo.name === item.name)?.image
+                }
+                id={item.id}
+                tech={item.tech}
+                url={item.html_url}
+                languages={item.languages_url}
+              />
+            ))}
+        </div>
+      )}
     </>
   );
 }

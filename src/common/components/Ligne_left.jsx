@@ -30,6 +30,10 @@ const Wrapper = styled.div`
   position: absolute;
   transform: rotate(90deg);
   left: 10px;
+  @media screen and (max-width : 475px){
+    display: none;
+    
+  }
 `;
 
 function Ligne_left() {

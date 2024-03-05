@@ -2,16 +2,12 @@ import "../styles/Home.css";
 import challenge from "../../images/challenges.jpg";
 import Collapse from "../../common/components/Collapse";
 
-
 // React Icons
-import {
-  FaCss3Alt,
- 
-} from "react-icons/fa";
-import {AiFillHtml5 }from "react-icons/ai";
+import { FaCss3Alt } from "react-icons/fa";
+import { AiFillHtml5 } from "react-icons/ai";
 
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
-import { DiReact} from "react-icons/di";
+import { DiReact } from "react-icons/di";
 import { BsGit, BsGithub } from "react-icons/bs";
 import {
   SiFigma,
@@ -22,6 +18,7 @@ import {
   SiAdobeillustrator,
   SiWordpress,
 } from "react-icons/si";
+import Description from "../../common/components/Description";
 
 const learning = [
   {
@@ -110,37 +107,22 @@ const learning = [
   },
 ];
 
-
-
-
 function Learning() {
-    const webTechs = learning.filter((item) => item.isWebTech);
-    const databases = learning.filter((item) => item.isDatabase);
-    const cms = learning.filter((item) => item.isCMS);
-    const uiTools = learning.filter((item) => item.isUI);
-    const isFront = learning.filter((item) => item.isFront)
-    const isBack = learning.filter((item)=> item.isBack)
+  const webTechs = learning.filter((item) => item.isWebTech);
+  const databases = learning.filter((item) => item.isDatabase);
+  const cms = learning.filter((item) => item.isCMS);
+  const uiTools = learning.filter((item) => item.isUI);
+  const isFront = learning.filter((item) => item.isFront);
+  const isBack = learning.filter((item) => item.isBack);
   return (
     <div className="custom-container">
-      <div className="section-shapes section-shapes">
-        <div className="section-square-wrapper ">
-          <div className="section-square"></div>
-          <h2> Technologies maîtrisées</h2>
-        </div>
-        <div className="section-image">
-          <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
-            <img src={challenge} alt="" />
-          </a>
-        </div>
-      </div>
-      <div className="section-description">
-        <p>
-          Découvrez les technologies que je maîtrise et qui sont au cœur de mon
-          expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et
-          bien plus encore, je suis prêt à relever tous les défis de
-          développement web.
-        </p>
-      </div>
+      <Description
+        title={"Technologies maîtrisées"}
+        image={challenge}
+        description={
+          "  Découvrez les technologies que je maîtrise et qui sont au cœur de mon expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et bien plus encore, je suis prêt à relever tous les défis de développement web."
+        }
+      ></Description>
 
       <div className="language-wrapper">
         <Collapse title="Frontend">

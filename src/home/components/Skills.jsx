@@ -5,6 +5,7 @@ import { GiStairsGoal } from "react-icons/gi";
 import { GoGoal } from "react-icons/go";
 
 import challenge from "../../images/learning-curve.jpg";
+import Description from "../../common/components/Description";
 
 const learning = [
   {
@@ -31,20 +32,10 @@ const learning = [
 function Skills() {
   return (
     <div className="custom-container">
-      <div className="section-shapes section-shapes">
-        <div className="section-square-wrapper ">
-          <div className="section-square"></div>
-          <h2>Technologies en Cours de Maîtrise</h2>
-        </div>
-        <div className="section-image">
-          <a href="https://fr.freepik.com/photos-gratuite/portrait-3d-personnes_66108324.htm#fromView=search&page=1&position=22&uuid=c806e90e-25a8-4762-b6bd-ceeede87f5cf">
-            <img src={challenge} alt="" />
-          </a>
-        </div>
-      </div>
-      <div className="section-description">
-        <p>
-          Je me concentre actuellement sur l'expansion de mes compétences
+      <Description
+        title={"Technologies en Cours de Maîtrise"}
+        image={challenge}
+        description="Je me concentre actuellement sur l'expansion de mes compétences
           techniques. Maîtrisant PHP, MySQL, Bootstrap, Sass et Tailwind, je
           développe des applications web dynamiques avec des interfaces
           réactives et esthétiques. En parallèle, j'explorer les possibilités
@@ -52,9 +43,9 @@ function Skills() {
           créer des expériences utilisateur innovantes et interactives. Ma
           démarche consiste à appliquer activement ces compétences dans des
           projets concrets, enrichissant ainsi mon savoir-faire dans le domaine
-          du développement web.
-        </p>
-      </div>
+          du développement web."
+      ></Description>
+    
       <div className="fliped-wrapper">
         {learning.map((learn, index) => (
           <div className="flip-card" key={index}>

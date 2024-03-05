@@ -1,18 +1,34 @@
 import "../styles/common.css";
 import { NavLink } from "react-router-dom";
 import { RiMenu3Line, RiCloseFill } from "react-icons/ri";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ModeContent from "./ModeContent";
 
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+ const ref = useRef(null);
 
+ const handleClickOutside = (event) => {
+   if (ref.current && !ref.current.contains(event.target)) {
+     setMenuOpen(false);
+   }
+ };
+
+ useEffect(() => {
+   // add event listener when component mounts
+   document.addEventListener("mousedown", handleClickOutside);
+
+   // cleanup function to remove event listener when component unmounts
+   return () => {
+     document.removeEventListener("mousedown", handleClickOutside);
+   };
+ }, []);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className="links-container">
+    <nav ref={ref} className="links-container">
       <ul className={`links ${menuOpen ? "open" : "closed"}`}>
         <li>
           <NavLink to="/" activeclassname="active">

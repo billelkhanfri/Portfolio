@@ -12,7 +12,7 @@ function Project() {
         <SettingBox></SettingBox>
         <PageHeader> </PageHeader>
         <div className="projectContainer">
-          <div>Project id : {param.projectId} <br/> Desing en cours ...</div>
+          <div>Project id : {param.projectId} <br/> Design en cours ...</div>
         </div>
       </>
     );
