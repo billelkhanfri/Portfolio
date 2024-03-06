@@ -42,6 +42,7 @@ function ProjectPage() {
        );
         const githubData = await githubResponse.json();
         setGithubData(githubData);
+        console.log(githubData);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
