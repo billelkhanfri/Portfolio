@@ -27,7 +27,6 @@ const RecFive = styled.div`
 `;
 const Wrapper = styled.div`
  
-  background-color: var(--body-color);
   display: flex;
   position: relative;
   gap: 10px;

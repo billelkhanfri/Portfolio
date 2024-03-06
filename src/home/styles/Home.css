@@ -59,9 +59,8 @@
 
 /*  start about banner */
 .section-one {
-  background-color: var(--body-color);
+   background-color: var(--body-color); 
   position: relative;
-  margin-bottom: 70px;
   width: 100vw;
 }
 
@@ -79,6 +78,7 @@
 }
 
 .hero-text {
+  /* color: var(--text-color); */
   color: var(--text-color);
 }
 
@@ -95,11 +95,11 @@
   align-items: center;
   padding-left: 30px;
   gap: 30px;
-  fill: red;
 }
 
 .icon {
   font-size: 40px;
+  /* color: var(--text-color); */
   color: var(--text-color);
 }
 
@@ -155,6 +155,7 @@
   text-align: left;
   font-size: 18px;
   margin-bottom: 20px;
+  color:#888888;
 }
 
 /* ############################################################################# */
@@ -162,9 +163,13 @@
 /* start Competences slider */
 
 .section-two {
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
+  background-color: var(--section-color);
   position: relative;
   width: 100vw;
+}
+.section-two p:first-child {
+    color: white !important;
 }
 .section-shapes {
   display: flex;
@@ -183,7 +188,7 @@
 }
 .section-shapes .section-square-wrapper h2 {
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--primary-color);
   line-height: 1.3;
   text-align: left;
@@ -204,7 +209,7 @@
   margin-bottom: 40px;
 }
 .section-description p {
-  color: var(--text-color);
+   color: var(--text-color); 
   text-align: left;
   width: 80%;
   margin: 1rem 0;
@@ -212,16 +217,18 @@
   line-height: 1.8;
   letter-spacing: 0.4;
 }
+.section-description.reverted p{
+
+  color: var(--text-color);
+}
 
 .slider-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
 .slider {
-  width: 82%;
   overflow: hidden;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -231,11 +238,14 @@
 }
 .slider::-webkit-scrollbar {
   display: none;
+    position: relative;
+
 }
 
 .inner {
   display: flex;
   cursor: grab;
+  position: relative;
 }
 
 .competence img {
@@ -243,9 +253,18 @@
   padding: 30px;
   pointer-events: none;
 }
-
-.arrow {
+.arrow-wrapper{
+    display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
   position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,0%);
+}
+.arrow {
+  
   width: 60px;
   height: 60px;
   font-size: 32px;
@@ -257,15 +276,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+ 
+
 }
 
-.left {
-  left: 5%;
-}
 
-.right {
-  right: 5%;
-}
 
 /* Style the HTML5 SVG icon */
 .html-svg {
@@ -322,8 +337,7 @@
   margin-right: 20px;
 }
 .competence-div {
-  width: 327.59px;
-  height: 327.59px;
+ 
 }
 @media screen and (max-width: 475px) {
   .slider-container {
@@ -360,8 +374,8 @@
 }
 
 .section-three {
+  /* background-color: var(--body-color); */
   background-color: var(--body-color);
-  padding-top: 60px;
   width: 100vw;
 }
 
@@ -376,7 +390,9 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-items: center;
-  margin-top: 40px;
+ border:  3px solid white;
+ padding: 40px 0px;
+border-radius: 8px;
 }
 .language-wrapper {
   padding: 60px;
@@ -388,6 +404,9 @@
   border: 1px solid rgb(218, 217, 217);
   margin-top: 60px;
   margin-bottom: 60px;
+      background-color: var(--body-color);
+      border-radius: 8px;
+
 }
 .language-list {
   padding: 8px;
@@ -488,11 +507,10 @@
   padding: 8px;
 }
 
-@media screen and (max-width : 475px){
+@media screen and (max-width: 475px) {
   .learning-wrapper {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  
-}
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
 
 /* end learning */
@@ -566,7 +584,6 @@
 
 .section-four {
   background-color: var(--body-color);
-  padding-top: 90px;
   width: 100vw;
 }
 .tailwind-svg {
@@ -651,5 +668,6 @@
     line-height: 1.8;
     letter-spacing: 0.4;
     width: 100%;
+    color: var(--text-color);
   }
 }

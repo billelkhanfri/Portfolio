@@ -27,13 +27,12 @@
 .header-area {
   position: fixed;
   z-index: 2;
-  color: var(--text-color);
+  color: var(--nav-color);
   background-color: var(--header-color);
   width: 100vw;
   .navigation-wrapper{
     max-width: 1440px;
     width: 82%;
-    padding: 20px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -61,7 +60,7 @@
         float: left;
 
       a {
-        color: var(--text-color);
+        color: var(--nav-color);
         text-decoration: none;
         transition: 0.3s;
         font-size: 16.5px;
@@ -113,7 +112,7 @@
   &:hover,
   &.active {
     background-color: white;
-    color: var(--primary-color) ;
+    color: var(--primary-color)!important ;
   }
 }
 

@@ -14,7 +14,6 @@ const SectionWrapper = styled.div`
   padding: 20px;
   text-align: center;
   margin: 0 px40px;
-  border-radius: 5px;
   background-color: var(--separate-color);
 `;
 

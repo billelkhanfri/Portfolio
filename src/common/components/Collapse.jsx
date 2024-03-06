@@ -14,7 +14,7 @@ const GobalWrapper = styled.div`
 `;
 
 const DropDownSeen = styled.div`
-  background: var(--body-color);
+  /* background: var(--body-color); */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,7 @@ const Title = styled.p`
   font-size: 20px;
   line-height: 2rem;
   margin: 0;
+  /* color: var(--text-color); */
   color: var(--text-color);
 `;
 

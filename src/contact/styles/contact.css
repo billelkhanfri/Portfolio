@@ -52,7 +52,7 @@ font-weight: 700;
 
 
 label {
-  color: var(--text-color);
+  color: #03372a;
 }
 input[type=text], input[type=email], select, textarea {
   width: 100%;
@@ -82,5 +82,4 @@ input[type=submit]:hover {
 
 .containerform {
   border-radius: 8px;
-  background-color: var(--body-color);
 }

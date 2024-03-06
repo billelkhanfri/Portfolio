@@ -81,12 +81,14 @@ const Competences = () => {
             ))}
           </motion.div>
         </motion.div>
-        <motion.div className="arrow left" onClick={handleMoveLeft}>
-          <FaArrowLeft />
-        </motion.div>
-        <motion.div className="arrow right" onClick={handleMoveRight}>
-          <FaArrowRight />
-        </motion.div>
+        <div className="arrow-wrapper">
+          <motion.div className="arrow " onClick={handleMoveLeft}>
+            <FaArrowLeft />
+          </motion.div>
+          <motion.div className="arrow " onClick={handleMoveRight}>
+            <FaArrowRight />
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );

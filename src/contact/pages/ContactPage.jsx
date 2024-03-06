@@ -8,7 +8,9 @@ function ContactPage() {
     <>
       <SettingBox></SettingBox>
       <PageHeader> </PageHeader>
-      <ContactForm></ContactForm>
+      <div style={{ backgroundColor: "rgb(247,247,247)" }}>
+        <ContactForm></ContactForm>
+      </div>
       <Footer></Footer>
     </>
   );

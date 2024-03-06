@@ -12,7 +12,7 @@ function DescriptionReverted(props) {
           </a>
         </div>
       </div>
-      <div className="section-description ">
+      <div className="section-description reverted ">
         <p>{props.description}</p>
       </div>
     </>

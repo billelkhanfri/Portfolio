@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 function ProjectCard({ name, id, image, url, languages }) {
   const [languageData, setLanguageData] = useState({});
-  const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
   useEffect(() => {
     const fetchLanguages = async () => {
+  const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
+
       try {
+              const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
+
         const response = await fetch(languages, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
@@ -51,11 +54,11 @@ function ProjectCard({ name, id, image, url, languages }) {
             </a>
           </div>
           <div className="text-wrapper">
-            {Object.entries(languageData).map(([language, lines]) => (
+            {/* {Object.entries(languageData).map(([language, lines]) => (
               <li key={language}>
-                {language} :  {( (lines / totalLines) * 100).toFixed(0)}%
+                {language} : {((lines / totalLines) * 100).toFixed(0)}%
               </li>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

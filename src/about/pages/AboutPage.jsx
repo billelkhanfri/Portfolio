@@ -16,10 +16,11 @@ function AboutPage() {
       <AboutBanner></AboutBanner>
       <About></About>
         <Separator title="Experience" color="var(--primary-color)"></Separator>
-
+    <div className="vertical-wrapper" >
         <Timeline></Timeline>
         <Separator title="Education" color="var(--bs-blue)"></Separator>
         <Education></Education>
+        </div> 
       <Footer></Footer>
     </>
   );

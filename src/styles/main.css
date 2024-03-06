@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  /* background-color: var(--body-color); */
   background-color: var(--body-color);
   font-family: "Open Sans", sans-serif;
 
@@ -12,6 +13,7 @@ body {
 }
 
 :root {
+
    --primary-color: #2ECC40; 
   --secondary-color: #e5e5e5;
   --color-golden: #dcca87;
@@ -20,13 +22,12 @@ body {
   --hover-color: #c2d500;
   --color-secondary: #7dcaa0;
   --color-border: #dadee3;
-  /* --body-color: #f9f9f9;
-  --header-color: #fffffff5;
-  --text-color: #333333; */
-  --body-color: #333333;
+  --text-color: #00372a; 
+  --body-color: #f9f9f9;
     --header-color: #00000095;
-    --text-color: #fff;
-    --separate-color: #dbdbdb
+    --separate-color: #dbdbdb ;
+    --section-color:  #0033a1;
+    --nav-color : white;
 }
 .custom-container {
   max-width: 1440px;

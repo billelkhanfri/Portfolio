@@ -1,14 +1,15 @@
 .thumbs-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   border-radius: 20px;
   row-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
   width: 82%;
-  max-width: 1024px;
+  max-width: 1440px;
   margin: auto;
   padding-top: 30px;
+  margin-bottom: 40px;
 }
 .thumbs-container a {
   text-decoration: none;
@@ -147,12 +148,12 @@ gap: 10px;
 /* start banner */
 
 .project-banner-wrapper {
-  height: 600px;
+  height: 700px;
   background-image: url("../../images/git.png");
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  background-size: cover;
+  background-size: contain;
   width: 100vw;
   z-index: -2;
 }
@@ -166,8 +167,8 @@ gap: 10px;
 }
 
 .slide-word {
-  color: #333333;
-  font-size: 12vw;
+  color: #00372a;
+  font-size: 12.1vw;
   font-weight: 800;
   animation: slideIn 1s ease-out;
   display: none;
@@ -227,7 +228,7 @@ gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--text-color);
   font-size: 36px;
   text-align: center;
 }

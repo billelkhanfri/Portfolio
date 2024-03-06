@@ -10,14 +10,15 @@ import ProjectBanner from "../helpers/ProjectBanner.jsx";
 import Loader from "../helpers/Loader.jsx";
 import Ligne_left from "../../common/components/Ligne_left";
 import Square from "../../common/components/Square";
-import Description from "../../common/components/Description.jsx";
+import DescriptionReverted from "../../common/components/DescriptionReverted.jsx";
 import API from "../../images/api.jpg";
+import Footer from "../../common/components/Footer";
+
 
 function ProjectPage() {
   const [firebaseData, setFirebaseData] = useState([]);
   const [githubData, setGithubData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,14 +32,15 @@ function ProjectPage() {
         setFirebaseData(firebaseNewData);
 
         // Fetch data from GitHub API
+  // const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
        const githubResponse = await fetch(
-         "https://api.github.com/users/billelkhanfri/repos",
-         {
-           headers: {
-             Authorization: `Bearer ${accessToken}`,
-           },
-         }
+         "https://api.github.com/users/billelkhanfri/repos"
+        //  {
+        //    headers: {
+        //      Authorization: `Bearer ${accessToken}`,
+        //    },
+        //  }
        );
         const githubData = await githubResponse.json();
         setGithubData(githubData);
@@ -62,13 +64,13 @@ function ProjectPage() {
       </div>
       <div className="custom-container">
         {" "}
-        <Description
-          title={"Projets"}
+        <DescriptionReverted
+          title={"API"}
           image={API}
           description={
             "Ce composant est une page qui affiche une liste de projets récupérés à partir de Firebase et GitHub pour créer une interface utilisateur complète. Les données sont récupérées de Firebase et GitHub via des appels d'API, puis affichées dynamiquement sur la page à l'aide de la logique de rendu conditionnel basée sur l'état de chargement "
           }
-        ></Description>
+        ></DescriptionReverted>
         <Ligne_left></Ligne_left>
       </div>
       <Separator title="PROJETS" color="var(--primary-color)"></Separator>
@@ -95,7 +97,7 @@ function ProjectPage() {
             ))}
         </div>
       )}
-    </>
+<Footer></Footer>    </>
   );
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { VscColorMode } from "react-icons/vsc";
 
 function ModeContent() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -16,15 +16,17 @@ function ModeContent() {
   const handelDarktMode = () => {
     const root = document.documentElement;
     root.style.setProperty("--body-color", "#333333");
-    root.style.setProperty("--header-color", "#00000095");
+    root.style.setProperty("--header-color", "#fffffff3");
     root.style.setProperty("--text-color", "#fff");
+    root.style.setProperty("--nav-color", "#00372a");
   };
 
   const handelLighttMode = () => {
     const root = document.documentElement;
     root.style.setProperty("--body-color", "#f9f9f9");
-    root.style.setProperty("--header-color", "#fffffff5");
-    root.style.setProperty("--text-color", "#333333");
+    root.style.setProperty("--header-color", "#00000095");
+    root.style.setProperty("--text-color", "#00372a");
+    root.style.setProperty("--nav-color", "#fff");
   };
 
   return (
