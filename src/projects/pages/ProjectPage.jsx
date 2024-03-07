@@ -94,9 +94,13 @@ function ProjectPage() {
             {githubData &&
               githubData
                 .filter((item) => {
-                  return search.toLowerCase() === ""
-                    ? item
-                    : item.name.toLowerCase().includes(search);
+                  if (search.trim() === "") {
+                    return true;
+                  } else {
+                    return item.name
+                      .toLowerCase()
+                      .includes(search.toLowerCase());
+                  }
                 })
                 .map((item) => (
                   <ProjectCard
