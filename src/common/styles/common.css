@@ -164,7 +164,7 @@
 .toggle-settings {
   position: fixed;
   left: 72px;
-  top: 10px;
+  top: 15px;
   text-align: center;
   cursor: pointer;
   z-index: 1001;
@@ -183,13 +183,13 @@
 
   .toggle-settings {
     left: 10px;
-    top: 15px;
+    top: 19px;
   }
 
 }
 
 .gear {
-  font-size: 36px;
+  font-size: 32px;
   padding: 0 !important;
   color: var(--primary-color);
   z-index: 3000;

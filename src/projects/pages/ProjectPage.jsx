@@ -19,6 +19,7 @@ function ProjectPage() {
   const [githubData, setGithubData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+
   const handleSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
@@ -34,20 +35,21 @@ function ProjectPage() {
         }));
         setFirebaseData(firebaseNewData);
 
-        // Fetch data from GitHub API
-        // const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
         const githubResponse = await fetch(
           "https://api.github.com/users/billelkhanfri/repos"
-          //  {
-          //    headers: {
-          //      Authorization: `Bearer ${accessToken}`,
-          //    },
-          //  }
+            
         );
         const githubData = await githubResponse.json();
         setGithubData(githubData);
+        console.log(githubData);
         setLoading(false);
+
+
+
+
+
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -111,7 +113,7 @@ function ProjectPage() {
                         ?.image
                     }
                     id={item.id}
-                    tech={item.tech}
+                    date={item.created_at}
                     url={item.html_url}
                     languages={item.languages_url}
                   />

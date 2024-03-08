@@ -1,40 +1,15 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 
-function ProjectCard({ name, id, image, url, languages }) {
-  const [languageData, setLanguageData] = useState({});
+function ProjectCard({ name, id, image, url, date }) {
 
-  useEffect(() => {
-    const fetchLanguages = async () => {
-  const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
 
-      try {
-              const accessToken = import.meta.env.VITE_GITHUB_ACCESS;
+ 
 
-        const response = await fetch(languages, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        });
-
-        const data = await response.json();
-        setLanguageData(data);
-      } catch (error) {
-        console.error("Error fetching language data:", error);
-      }
-    };
-
-    fetchLanguages();
-  }, [languages]);
-
-  // Calculate the total number of lines
-  const totalLines = Object.values(languageData).reduce(
-    (acc, lines) => acc + lines,
-    0
-  );
+ 
   const handleClick = (event) => {
     event.stopPropagation();
   };
+  const created_at = date.split("T")
   return (
     <>
       <div className="thumb">
@@ -54,11 +29,7 @@ function ProjectCard({ name, id, image, url, languages }) {
             </a>
           </div>
           <div className="text-wrapper">
-            {/* {Object.entries(languageData).map(([language, lines]) => (
-              <li key={language}>
-                {language} : {((lines / totalLines) * 100).toFixed(0)}%
-              </li>
-            ))} */}
+          {created_at[0]}
           </div>
         </div>
       </div>
