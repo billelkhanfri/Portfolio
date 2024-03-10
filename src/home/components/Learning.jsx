@@ -120,7 +120,7 @@ function Learning() {
         title={"Technologies maîtrisées"}
         image={challenge}
         description={
-          "  Découvrez les technologies que je maîtrise et qui sont au cœur de mon expertise. Avec une solide expérience dans HTML, CSS, JavaScript, et bien plus encore, je suis prêt à relever tous les défis de développement web."
+          "Ces compétences reflètent mon engagement à élargir mes connaissances et à me perfectionner dans divers aspects du développement web et de la conception d'interfaces utilisateur."
         }
       ></Description>
 

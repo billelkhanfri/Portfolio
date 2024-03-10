@@ -63,7 +63,7 @@ const Competences = () => {
         title={"Environement"}
         image={front}
         description={
-          " Découvrez les technologies que je maîtrise et qui sont au cœur de mon expertise. Avec une solide expérience dans HTML, CSS, JavaScript, etbien plus encore, je suis prêt à relever tous les défis de développement web."
+          " Ces compétences me permettent de concevoir et de développer des applications web modernes et réactives, en utilisant une variété d'outils et de technologies pour répondre aux besoins des utilisateurs et des clients"
         }
       ></DescriptionReverted>
 
