@@ -17,16 +17,17 @@ function Project() {
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
-        // const accessToken = import.meta.env.VITE_GIT_ACCESS;
+         const accessToken = import.meta.env.VITE_GIT_ACCESS;
 
         // Fetch project data
         const response = await fetch(
            `https://api.github.com/repositories/${projectId}`
-          // , {
-          //   headers: {
-          //     Authorization: `Bearer ${accessToken}`,
-          //   },
-          // }
+           , {
+          
+           headers: {
+               Authorization: `Bearer ${accessToken}`,
+             },
+           }
         );
 
         if (!response.ok) {

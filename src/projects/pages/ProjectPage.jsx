@@ -35,14 +35,14 @@ function ProjectPage() {
         }));
         setFirebaseData(firebaseNewData);
 
-        // const accessToken = import.meta.env.VITE_GIT_ACCESS;
+         const accessToken = import.meta.env.VITE_GIT_ACCESS;
         const githubResponse = await fetch(
           "https://api.github.com/users/billelkhanfri/repos"
-          // ,{
-          //   headers: {
-          //     Authorization: `Bearer ${accessToken}`,
-          //   },
-          // }
+           ,{
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+           }
         );
         const githubData = await githubResponse.json();
         setGithubData(githubData);
