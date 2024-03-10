@@ -17,16 +17,16 @@ function Project() {
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
-        const accessToken = import.meta.env.VITE_GIT_ACCESS;
+        // const accessToken = import.meta.env.VITE_GIT_ACCESS;
 
         // Fetch project data
         const response = await fetch(
-          `https://api.github.com/repositories/${projectId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
+           `https://api.github.com/repositories/${projectId}`
+          // , {
+          //   headers: {
+          //     Authorization: `Bearer ${accessToken}`,
+          //   },
+          // }
         );
 
         if (!response.ok) {
@@ -38,12 +38,12 @@ function Project() {
 
         // Fetch README content
         const readmeResponse = await fetch(
-          `https://api.github.com/repos/${data.full_name}/readme`,
-          {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
-            },
-          }
+           `https://api.github.com/repos/${data.full_name}/readme`
+          // ,{
+          //   headers: {
+          //     Authorization: `Bearer ${accessToken}`,
+          //   },
+          // }
         );
 
         if (!readmeResponse.ok) {
