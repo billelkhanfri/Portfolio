@@ -1,5 +1,4 @@
 import "../styles/Home.css";
-import SettingBox from "../../common/components/SettingBox";
 import { useEffect } from "react";
 import Separator from "../../common/components/Separator";
 import Skills from "../components/Skills";
@@ -32,8 +31,6 @@ function HomePage() {
   const slides = [slide1, slide2, slide3, slide4];
   return (
     <>
-      <SettingBox></SettingBox>
-      {/* <Banner></Banner> */}
       <LandSlider slides={slides} />
       <div className="section-one">
         <Ligne></Ligne>

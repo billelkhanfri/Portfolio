@@ -4,7 +4,6 @@ import Landing from "./Landing";
 import "./LandSlider.css";
 import { GoDotFill } from "react-icons/go";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
-import PageHeader from "../../../common/components/PageHeader";
 
 
 
@@ -28,7 +27,6 @@ const LandSlider = ({ slides }) => {
           style={{ backgroundImage: `url(${slides[currentIndex]})` }}
         >
          
-<PageHeader></PageHeader>
           <Landing
             currentIndex={currentIndex}
             setCurrentIndex={setCurrentIndex}

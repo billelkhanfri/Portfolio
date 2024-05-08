@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import PageHeader from "../../common/components/PageHeader";
-import SettingBox from "../../common/components/SettingBox";
 import "../styles/projects.css";
 import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm"; 
+import gfm from "remark-gfm";
 import Loader from "../helpers/Loader.jsx";
 import Footer from "../../common/components/Footer";
-import Square from "../../common/components/Square.jsx"
+import Square from "../../common/components/Square.jsx";
 
 function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -21,7 +19,7 @@ function Project() {
 
         // Fetch project data
         const response = await fetch(
-           `https://api.github.com/repositories/${projectId}`
+          `https://api.github.com/repositories/${projectId}`
           // , {
           //   headers: {
           //     Authorization: `Bearer ${accessToken}`,
@@ -38,7 +36,7 @@ function Project() {
 
         // Fetch README content
         const readmeResponse = await fetch(
-           `https://api.github.com/repos/${data.full_name}/readme`
+          `https://api.github.com/repos/${data.full_name}/readme`
           // ,{
           //   headers: {
           //     Authorization: `Bearer ${accessToken}`,
@@ -65,9 +63,6 @@ function Project() {
 
   return (
     <>
-      <SettingBox />
-      <PageHeader />
-
       <div className="project-wrap custom-container">
         <Square></Square>
 
