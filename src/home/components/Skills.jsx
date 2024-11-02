@@ -1,17 +1,18 @@
 import "../styles/Home.css";
 
-import { SiTailwindcss, SiPhp, SiMysql, SiFuturelearn } from "react-icons/si";
+import {  SiPhp, SiMysql, SiFuturelearn } from "react-icons/si";
 import { GiStairsGoal } from "react-icons/gi";
 import { GoGoal } from "react-icons/go";
+import { SiTypescript } from "react-icons/si";
 
 import challenge from "../../images/learning-curve.jpg";
 import Description from "../../common/components/Description";
 
 const learning = [
   {
-    icon: <SiTailwindcss className="tailwind-svg svg-icon-skill" />,
-    language: "TAILWIND",
-    p: "20%",
+    icon: <SiTypescript className="typescript-svg svg-icon-skill" />,
+    language: "Typescript",
+    p: "35%",
     bg: "bg-one",
     progress: <GiStairsGoal className="progress-icon" />,
   },

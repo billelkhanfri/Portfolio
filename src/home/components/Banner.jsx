@@ -1,6 +1,7 @@
 //import images from "../images.json";
 import "../styles/Home.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/khanfri-billel.appspot.com/o/D_Home.png?alt=media&token=ead9e575-824a-4d5c-98eb-164b6afc2422",
@@ -35,7 +36,12 @@ const Banner = () => {
           Transformez vos idées en réalité grâce à mes compétences de
           développement web
         </p>
-        <button>Télecharger mon CV</button>
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/projects%2FCV_CLASSIQUE_KHANFRI.pdf?alt=media&token=7831d864-9c10-4edf-bb9d-c57db91a97e6"
+          download
+        >
+          <button>Télécharger mon CV</button>
+        </a>
       </div>
     </div>
   );

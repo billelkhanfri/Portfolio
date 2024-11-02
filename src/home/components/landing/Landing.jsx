@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./LandSlider.css";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ currentIndex, setCurrentIndex }) => {
@@ -73,7 +74,14 @@ const initialContent = [
         <div className={paragClass}>
           <p>{content.p}</p>
         </div>
-        <button className="banner_button">Télecharger mon CV</button>
+        
+        <Link
+          to="https://firebasestorage.googleapis.com/v0/b/billel-khanfri.appspot.com/o/projects%2FCV_CLASSIQUE_KHANFRI.pdf?alt=media&token=7831d864-9c10-4edf-bb9d-c57db91a97e6"
+          download
+          target="_blank"
+        >
+          <button className="banner_button">Télécharger mon CV</button>
+        </Link>
       </div>
     </>
   );

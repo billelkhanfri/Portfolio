@@ -19,7 +19,7 @@
 
 .content {
   text-align: center;
-  z-index: 1;
+  z-index: 1000;
 
   h1 {
     color: var(--text-color);
@@ -587,8 +587,8 @@ border-radius: 8px;
   background-color: var(--body-color);
   width: 100vw;
 }
-.tailwind-svg {
-  color: #38b2ac;
+.typescript-svg {
+  color: #007acc;
 }
 
 .php-svg {
@@ -599,10 +599,9 @@ border-radius: 8px;
 }
 
 .svg-icon-skill {
-  width: 300px;
+  width: 220px;
   height: 300px;
   font-size: 48em;
-
   box-shadow: 0px 75px 45px -75px rgb(0 0 0 / 60%);
   border: 5px solid rf;
   padding: 10px;

@@ -5,6 +5,7 @@ import Collapse from "../../common/components/Collapse";
 // React Icons
 import { FaCss3Alt } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
+import { SiExpress } from "react-icons/si";
 
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
 import { DiReact } from "react-icons/di";
@@ -46,8 +47,14 @@ const learning = [
     p: "",
   },
   {
-    icon: <IoLogoNodejs className="react-svg svg-icon-learn" />,
+    icon: <IoLogoNodejs className="node-svg svg-icon-learn" />,
     language: "Node js",
+    isBack: true,
+    p: "",
+  },
+  {
+    icon: <SiExpress  className="express-svg svg-icon-learn" />,
+    language: "Express",
     isBack: true,
     p: "",
   },

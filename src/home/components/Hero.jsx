@@ -96,7 +96,7 @@ function Hero() {
             <div className="citation-author">
               <p>Billel KHANFRI</p>
 
-              <TypingEffect typedText=" Développeur Frontend "></TypingEffect>
+              <TypingEffect typedText=" Développeur Javascript "></TypingEffect>
             </div>
 
             <div className="icons">
